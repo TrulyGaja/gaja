@@ -1,173 +1,325 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gajapathy Dasarathan | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gajapathy Dasarathan | Investment Reporting Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<h1>Gajapathy Dasarathan</h1>
-<p>Investment Reporting & Financial Reporting Professional</p>
-</header>
+<!-- Background grid -->
+<div class="bg-grid"></div>
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
 
-<nav>
-<a href="#profile">Profile</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#education">Education</a>
-<a href="#additional">Additional</a>
-<a href="#contact">Contact</a>
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">GD</div>
+  <div class="nav-links">
+    <a href="#profile" class="nav-link">Profile</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#contact" class="nav-link nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<section id="profile">
-<h2>Profile Summary</h2>
-<p>
-Investment Reporting and Financial Reporting professional with experience in
-Private Equity, Hedge Funds, and Separate Accounts. Strong focus on AI and
-automation including building Custom GPT tools to automate fund fact reviews
-and improve reporting efficiency. Experienced in US GAAP and IFRS financial
-statements, KPI reporting and collaboration with onshore teams.
-</p>
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#profile" class="mob-link">Profile</a>
+  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#experience" class="mob-link">Experience</a>
+  <a href="#education" class="mob-link">Education</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- Hero -->
+<header class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge reveal">
+      <span class="badge-dot"></span>
+      Available for opportunities
+    </div>
+    <h1 class="hero-name reveal">
+      <span class="name-line">Gajapathy</span>
+      <span class="name-line accent-line">Dasarathan</span>
+    </h1>
+    <p class="hero-title reveal">Investment Reporting &amp; Financial Reporting Professional</p>
+    <p class="hero-sub reveal">Chennai, India &nbsp;·&nbsp; 4+ Years Experience &nbsp;·&nbsp; US GAAP · IFRS · AI Automation</p>
+    <div class="hero-actions reveal">
+      <a href="#experience" class="btn btn-primary">View Experience</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</header>
+
+<!-- Profile -->
+<section id="profile" class="section">
+  <div class="container">
+    <div class="section-label reveal">01 — Profile</div>
+    <h2 class="section-title reveal">About Me</h2>
+    <div class="profile-grid">
+      <div class="profile-text reveal">
+        <p>Investment Reporting and Financial Reporting professional with experience in <strong>Private Equity, Hedge Funds,</strong> and <strong>Separate Accounts</strong>. Strong focus on AI and automation including building Custom GPT tools to automate fund fact reviews and improve reporting efficiency.</p>
+        <p>Experienced in US GAAP and IFRS financial statements, KPI reporting and collaboration with onshore teams. Recognised by leadership at both Empower and State Street for quality improvements and innovative AI-based automation.</p>
+      </div>
+      <div class="profile-stats reveal">
+        <div class="stat-card">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Major Employers</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Accounting Standards</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">AI</span>
+          <span class="stat-label">Automation Builder</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="skills">
+<!-- Skills -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-label reveal">02 — Skills</div>
+    <h2 class="section-title reveal">Core Competencies</h2>
+    <div class="skills-grid">
 
-<h2>Core Skills</h2>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">📊</div>
+        <h3>Financial & Investment Reporting</h3>
+        <div class="tag-list">
+          <span class="tag">Financial Reporting</span>
+          <span class="tag">Private Equity</span>
+          <span class="tag">Hedge Funds</span>
+          <span class="tag">Mutual Funds</span>
+          <span class="tag">CLO</span>
+          <span class="tag">REITs</span>
+        </div>
+      </div>
 
-<h3>Financial & Investment Reporting</h3>
-<ul>
-<li>Financial Reporting</li>
-<li>Private Equity</li>
-<li>Hedge Funds</li>
-<li>Mutual Funds</li>
-</ul>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">📋</div>
+        <h3>Accounting Standards</h3>
+        <div class="tag-list">
+          <span class="tag tag-accent">US GAAP</span>
+          <span class="tag tag-accent">IFRS</span>
+          <span class="tag">KPI Preparation</span>
+          <span class="tag">Financial Statements</span>
+        </div>
+      </div>
 
-<h3>Accounting Standards</h3>
-<ul>
-<li>US GAAP</li>
-<li>IFRS</li>
-</ul>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">🤖</div>
+        <h3>AI & Automation</h3>
+        <div class="tag-list">
+          <span class="tag tag-gold">Custom GPT Development</span>
+          <span class="tag tag-gold">Process Automation</span>
+          <span class="tag tag-gold">AI in Finance</span>
+          <span class="tag tag-gold">ChatGPT</span>
+        </div>
+      </div>
 
-<h3>Performance Reporting</h3>
-<ul>
-<li>KPI Preparation</li>
-<li>Analysis & Review</li>
-</ul>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">🛠️</div>
+        <h3>Data & Reporting Tools</h3>
+        <div class="tag-list">
+          <span class="tag">MS Excel</span>
+          <span class="tag">SQL</span>
+          <span class="tag">MS Access</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">SAP</span>
+          <span class="tag">Tally ERP</span>
+        </div>
+      </div>
 
-<h3>AI & Automation</h3>
-<ul>
-<li>Process Automation</li>
-<li>AI Integration in Finance</li>
-<li>Custom GPT Development</li>
-<li>ChatGPT for Reporting Automation</li>
-</ul>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">📈</div>
+        <h3>Investment Platforms</h3>
+        <div class="tag-list">
+          <span class="tag">Nasdaq eVestment</span>
+          <span class="tag">Wilshire</span>
+          <span class="tag">Callan</span>
+          <span class="tag">Informa</span>
+          <span class="tag">Broadridge</span>
+          <span class="tag">Confluence</span>
+        </div>
+      </div>
 
-<h3>Data & Reporting Tools</h3>
-<ul>
-<li>MS Excel</li>
-<li>MS Word</li>
-<li>PowerPoint</li>
-<li>MS Access</li>
-<li>SQL</li>
-</ul>
-
-<h3>Analytics & Systems</h3>
-<ul>
-<li>Power BI</li>
-<li>SAP</li>
-<li>Tally ERP</li>
-<li>TCS ION</li>
-</ul>
-
-<h3>Investment Platforms</h3>
-<ul>
-<li>Nasdaq eVestment</li>
-<li>Wilshire</li>
-<li>Callan</li>
-<li>Informa</li>
-<li>Broadridge</li>
-<li>Confluence</li>
-</ul>
-
+    </div>
+  </div>
 </section>
 
-<section id="experience">
+<!-- Experience -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label reveal">03 — Experience</div>
+    <h2 class="section-title reveal">Professional Journey</h2>
+    <div class="timeline">
 
-<h2>Professional Experience</h2>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">
+          <div class="tl-dot active"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <div>
+              <span class="tl-period current">May 2025 – Present</span>
+              <h3 class="tl-role">Investment Reporting Analyst</h3>
+              <p class="tl-company">Empower &nbsp;·&nbsp; Bengaluru</p>
+            </div>
+            <div class="tl-badge">Current</div>
+          </div>
+          <ul class="tl-bullets">
+            <li>Prepared and reviewed financial statements and disclosures for Mutual Funds in compliance with US GAAP</li>
+            <li>Reviewed fund fact sheets to verify completeness and regulatory requirements</li>
+            <li>Built Custom GPT tools to automate fund fact review processes — <em>recognised by leadership</em></li>
+            <li>Executed SQL queries using MS Access for data validation and reporting</li>
+            <li>Worked with Nasdaq eVestment, Wilshire, Callan, Informa, Broadridge and Confluence platforms</li>
+          </ul>
+        </div>
+      </div>
 
-<h3>Investment Reporting Analyst — Empower</h3>
-<p><b>Location:</b> Bengaluru | <b>Period:</b> May 2025 – Present</p>
-<ul>
-<li>Prepared and reviewed financial statements and disclosures for Mutual Funds in compliance with US GAAP.</li>
-<li>Reviewed fund fact sheets to verify completeness and regulatory requirements.</li>
-<li>Built Custom GPT tools to automate fund fact review processes.</li>
-<li>Executed SQL queries using MS Access for data validation and reporting.</li>
-<li>Worked with Nasdaq eVestment, Wilshire, Callan, Informa, Broadridge and Confluence platforms.</li>
-<li>Received appreciation from leadership for developing AI-based automation.</li>
-</ul>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <div>
+              <span class="tl-period">Oct 2022 – Apr 2025</span>
+              <h3 class="tl-role">Associate 2</h3>
+              <p class="tl-company">State Street &nbsp;·&nbsp; Chennai</p>
+            </div>
+          </div>
+          <ul class="tl-bullets">
+            <li>Prepared financial statements for Private Equity, CLO, Hedge Funds, REITs and Fund of Funds</li>
+            <li>Prepared balance sheets, income statements, capital statements, schedules of investments and footnotes</li>
+            <li>Worked under US GAAP and IFRS reporting standards</li>
+            <li>Collaborated with onshore teams for fund delivery timelines</li>
+            <li>Received appreciation from Managing Director for quality improvements</li>
+          </ul>
+        </div>
+      </div>
 
-<h3>Associate 2 — State Street</h3>
-<p><b>Location:</b> Chennai | <b>Period:</b> Oct 2022 – Apr 2025</p>
-<ul>
-<li>Prepared financial statements for Private Equity, CLO, Hedge Funds, REITs and Fund of Funds.</li>
-<li>Prepared balance sheets, income statements, capital statements, schedules of investments and footnotes.</li>
-<li>Worked under US GAAP and IFRS reporting standards.</li>
-<li>Collaborated with onshore teams for fund delivery timelines.</li>
-<li>Improved financial reporting workflows and documentation.</li>
-<li>Received appreciation from Managing Director for quality improvements.</li>
-</ul>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">
+          <div class="tl-dot"></div>
+        </div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <div>
+              <span class="tl-period">Aug 2021 – Feb 2022</span>
+              <h3 class="tl-role">Intern</h3>
+              <p class="tl-company">Rajesh &amp; Ganesh Chartered Accountant &nbsp;·&nbsp; Chennai</p>
+            </div>
+          </div>
+          <ul class="tl-bullets">
+            <li>Worked on accounting and audit services for clients</li>
+            <li>Participated in forensic audit and cost audit assignments</li>
+            <li>Performed product costing and variance analysis for MSMEs</li>
+            <li>Prepared MIS reports for management</li>
+          </ul>
+        </div>
+      </div>
 
-<h3>Intern — Rajesh & Ganesh Chartered Accountant</h3>
-<p><b>Location:</b> Chennai | <b>Period:</b> Aug 2021 – Feb 2022</p>
-<ul>
-<li>Worked on accounting and audit services for clients.</li>
-<li>Participated in forensic audit and cost audit assignments.</li>
-<li>Performed product costing and variance analysis for MSMEs.</li>
-<li>Prepared MIS reports for management.</li>
-</ul>
-
+    </div>
+  </div>
 </section>
 
-<section id="education">
+<!-- Education -->
+<section id="education" class="section section-alt">
+  <div class="container">
+    <div class="section-label reveal">04 — Education</div>
+    <h2 class="section-title reveal">Academic Background</h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-body">
+          <h3>CMA Intermediate</h3>
+          <p class="edu-inst">Institute of Cost Accountants of India</p>
+          <span class="edu-year">2020</span>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-icon">🏛️</div>
+        <div class="edu-body">
+          <h3>B.Com</h3>
+          <p class="edu-inst">DG Vaishnav College</p>
+          <span class="edu-year">2021</span>
+        </div>
+      </div>
+    </div>
 
-<h2>Education</h2>
-
-<ul>
-<li>CMA Intermediate — Institute of Cost Accountants of India (2020)</li>
-<li>B.Com — DG Vaishnav College (2021)</li>
-</ul>
-
+    <!-- Additional Info -->
+    <div class="section-label reveal" style="margin-top:3rem">Languages &amp; Other</div>
+    <div class="lang-grid reveal">
+      <div class="lang-item"><span class="lang-name">English</span><span class="lang-level fluent">Fluent</span></div>
+      <div class="lang-item"><span class="lang-name">Tamil</span><span class="lang-level native">Native</span></div>
+      <div class="lang-item"><span class="lang-name">Telugu</span><span class="lang-level beginner">Beginner</span></div>
+      <div class="lang-item"><span class="lang-name">Typewriting</span><span class="lang-level intermediate">Intermediate</span></div>
+    </div>
+  </div>
 </section>
 
-<section id="additional">
-
-<h2>Additional Information</h2>
-
-<ul>
-<li>English — Fluent</li>
-<li>Tamil — Native</li>
-<li>Telugu — Beginner</li>
-<li>Typewriting — Intermediate</li>
-</ul>
-
+<!-- Contact -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-label reveal">05 — Contact</div>
+    <h2 class="section-title reveal">Let's Connect</h2>
+    <p class="contact-sub reveal">Open to Investment Reporting, Financial Reporting, and AI Automation roles.</p>
+    <div class="contact-cards reveal">
+      <a href="mailto:gajapathy165@gmail.com" class="contact-card">
+        <span class="contact-icon">✉️</span>
+        <div>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">gajapathy165@gmail.com</span>
+        </div>
+      </a>
+      <a href="tel:+919345465667" class="contact-card">
+        <span class="contact-icon">📞</span>
+        <div>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+91 93454 65667</span>
+        </div>
+      </a>
+      <div class="contact-card">
+        <span class="contact-icon">📍</span>
+        <div>
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Chennai, Tamil Nadu, India</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>📍 Chennai, Tamil Nadu, India</p>
-<p>📧 gajapathy165@gmail.com</p>
-<p>📞 +91 93454 65667</p>
-
-</section>
-
-<footer>
-<p>© 2026 Gajapathy Dasarathan</p>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Gajapathy Dasarathan &nbsp;·&nbsp; Investment Reporting Professional</p>
+  </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
