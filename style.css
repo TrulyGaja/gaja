@@ -1,269 +1,3 @@
-
-
-<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Gajapathy Dasarathan | Portfolio</title> <link rel="stylesheet" href="style.css"> </head> <body> <header> <h1>Gajapathy Dasarathan</h1> <p>Investment Reporting & Financial Reporting Professional</p> </header> <nav> <a hre
-
-pasted
-
-I have developed my website using the github. I need to enhance the interface of the website using Claude. I have index.html, style.css, script.js and README.md
-
-I will provide each creative via prompts idea of through chains of thoughts prompts user task is to add the code to enhance the websites. 
-
-For your reference , i have added the index.html as snip, and below i have pasted the script.js codes
-"const profile = {
-name: "Gajapathy Dasarathan",
-title: "Investment Reporting & Financial Reporting Professional",
-summary: "Investment Reporting professional experienced in Private Equity, Hedge Funds and Separate Accounts. Strong interest in AI automation in finance including building Custom GPT tools for fund fact review and reporting efficiency.",
-contact: "Email: gajapathy165@gmail.com | Phone: +91 93454 65667 | Chennai, India",
-skills: [
-"Financial Reporting",
-"Private Equity",
-"Hedge Funds",
-"Mutual Funds",
-"US GAAP",
-"IFRS",
-"Power BI",
-"SQL",
-"MS Excel",
-"MS Access",
-"AI Automation",
-"Process Improvement",
-"Investment Platforms"
-],
-experience: [
-{
-role:"Investment Reporting Analyst",
-company:"Empower – Bengaluru",
-period:"May 2025 – Present",
-desc:"Preparing and reviewing mutual fund financial statements under US GAAP, automating fund fact reviews using Custom GPT tools and validating reporting data using SQL."
-},
-{
-role:"Associate 2",
-company:"State Street – Chennai",
-period:"Oct 2022 – Apr 2025",
-desc:"Prepared fund level financial statements for Private Equity, CLOs, REITs, Hedge Funds and Fund of Funds under US GAAP and IFRS."
-},
-{
-role:"Intern",
-company:"Rajesh and Ganesh Chartered Accountant – Chennai",
-period:"Aug 2021 – Feb 2022",
-desc:"Worked on forensic audit, cost audit, product costing and MIS reporting."
-}
-],
-education: [
-"CMA Intermediate – Institute of Cost Accountants of India",
-"B.Com – DG Vaishnav College"
-]
-};
-// Populate profile
-document.getElementById("name").innerText = profile.name;
-document.getElementById("title").innerText = profile.title;
-document.getElementById("summary").innerText = profile.summary;
-document.getElementById("contact").innerText = profile.contact;
-// Skills
-const skillsList = document.getElementById("skillsList");
-profile.skills.forEach(skill=>{
-let li=document.createElement("li");
-li.innerText=skill;
-skillsList.appendChild(li);
-});
-// Experience
-const experienceList=document.getElementById("experienceList");
-profile.experience.forEach(job=>{
-let div=document.createElement("div");
-let title=document.createElement("h3");
-title.innerText=job.role;
-let company=document.createElement("p");
-company.innerText=job.company + " | " + job.period;
-let desc=document.createElement("p");
-desc.innerText=job.desc;
-div.appendChild(title);
-div.appendChild(company);
-div.appendChild(desc);
-experienceList.appendChild(div);
-});
-// Education
-const educationList=document.getElementById("educationList");
-profile.education.forEach(ed=>{
-let li=document.createElement("li");
-li.innerText=ed;
-educationList.appendChild(li);
-});
-// Microblog example
-const posts=[
-{
-title:"What is Fund Accounting?",
-text:"Fund accounting tracks assets and liabilities of investment funds separately for each investor group."
-},
-{
-title:"US GAAP vs IFRS",
-text:"US GAAP is rule based accounting while IFRS focuses on principles."
-}
-];
-const blog=document.getElementById("blogPosts");
-posts.forEach(post=>{
-let div=document.createElement("div");
-let title=document.createElement("h3");
-title.innerText=post.title;
-let text=document.createElement("p");
-text.innerText=post.text;
-div.appendChild(title);
-div.appendChild(text);
-blog.appendChild(div);
-});"
-
-style.css
-"const profile = {
-name: "Gajapathy Dasarathan",
-title: "Investment Reporting & Financial Reporting Professional",
-summary: "Investment Reporting professional experienced in Private Equity, Hedge Funds and Separate Accounts. Strong interest in AI automation in finance including building Custom GPT tools for fund fact review and reporting efficiency.",
-contact: "Email: gajapathy165@gmail.com | Phone: +91 93454 65667 | Chennai, India",
-skills: [
-"Financial Reporting",
-"Private Equity",
-"Hedge Funds",
-"Mutual Funds",
-"US GAAP",
-"IFRS",
-"Power BI",
-"SQL",
-"MS Excel",
-"MS Access",
-"AI Automation",
-"Process Improvement",
-"Investment Platforms"
-],
-experience: [
-{
-role:"Investment Reporting Analyst",
-company:"Empower – Bengaluru",
-period:"May 2025 – Present",
-desc:"Preparing and reviewing mutual fund financial statements under US GAAP, automating fund fact reviews using Custom GPT tools and validating reporting data using SQL."
-},
-{
-role:"Associate 2",
-company:"State Street – Chennai",
-period:"Oct 2022 – Apr 2025",
-desc:"Prepared fund level financial statements for Private Equity, CLOs, REITs, Hedge Funds and Fund of Funds under US GAAP and IFRS."
-},
-{
-role:"Intern",
-company:"Rajesh and Ganesh Chartered Accountant – Chennai",
-period:"Aug 2021 – Feb 2022",
-desc:"Worked on forensic audit, cost audit, product costing and MIS reporting."
-}
-],
-education: [
-"CMA Intermediate – Institute of Cost Accountants of India",
-"B.Com – DG Vaishnav College"
-]
-};
-// Populate profile
-document.getElementById("name").innerText = profile.name;
-document.getElementById("title").innerText = profile.title;
-document.getElementById("summary").innerText = profile.summary;
-document.getElementById("contact").innerText = profile.contact;
-// Skills
-const skillsList = document.getElementById("skillsList");
-profile.skills.forEach(skill=>{
-let li=document.createElement("li");
-li.innerText=skill;
-skillsList.appendChild(li);
-});
-// Experience
-const experienceList=document.getElementById("experienceList");
-profile.experience.forEach(job=>{
-let div=document.createElement("div");
-let title=document.createElement("h3");
-title.innerText=job.role;
-let company=document.createElement("p");
-company.innerText=job.company + " | " + job.period;
-let desc=document.createElement("p");
-desc.innerText=job.desc;
-div.appendChild(title);
-div.appendChild(company);
-div.appendChild(desc);
-experienceList.appendChild(div);
-});
-// Education
-const educationList=document.getElementById("educationList");
-profile.education.forEach(ed=>{
-let li=document.createElement("li");
-li.innerText=ed;
-educationList.appendChild(li);
-});
-// Microblog example
-const posts=[
-{
-title:"What is Fund Accounting?",
-text:"Fund accounting tracks assets and liabilities of investment funds separately for each investor group."
-},
-{
-title:"US GAAP vs IFRS",
-text:"US GAAP is rule based accounting while IFRS focuses on principles."
-}
-];
-const blog=document.getElementById("blogPosts");
-posts.forEach(post=>{
-let div=document.createElement("div");
-let title=document.createElement("h3");
-title.innerText=post.title;
-let text=document.createElement("p");
-text.innerText=post.text;
-div.appendChild(title);
-div.appendChild(text);
-blog.appendChild(div);
-});"
-
-Show more
-5:18 pm
-
-Check frontend design skill
-Check frontend design skill
-I can see your portfolio's structure clearly. Let me build a significantly enhanced version with a striking, professional aesthetic — I'll create all three files for you to drop into your GitHub repo.
-
-
-Created 3 files, ran a command, read a file
-Created 3 files, ran a command, read a file
-Here are all three enhanced files ready to drop into your GitHub repo. Here's what was redesigned and added:
-
-Visual Theme — Refined Dark Financial
-
-Deep dark background (
-#0a0c10) with a subtle grid overlay and two floating ambient orbs (gold + blue) that follow the mouse
-Gold accent (
-#c9a84c) throughout — professional and distinctive for finance
-Playfair Display (serif) for headings, DM Sans for body, DM Mono for labels/tags
-New UI Components
-
-Fixed navbar with blur backdrop + scroll shrink effect, plus a mobile hamburger menu
-Hero section with animated "Available" badge, large typographic name, and CTA buttons
-4-stat counter row (animated numbers on scroll)
-Skills rendered as categorised cards with colour-coded tags (gold for AI, blue for standards)
-Timeline layout for experience with a glowing dot for your current role
-Education cards, language level badges, and styled contact cards with hover slide effect
-Interactions (script.js)
-
-Scroll-reveal animations on every section with stagger delays
-Active nav link highlighting based on scroll position
-Animated number counters for the stat cards
-Subtle parallax on the background orbs
-Just replace your three files and push to GitHub — no other changes needed.
-
-Index
-Code · HTML 
-Style
-Code · CSS 
-Script
-JS 
-
-
-
-
-
-Claude is AI and can make mistakes. Please double-check responses.
-Style · CSS
-Copy
-
 /* ============================================
    GAJAPATHY DASARATHAN — PORTFOLIO CSS
    Theme: Refined Dark Financial Professional
@@ -397,9 +131,58 @@ em { color: var(--accent); font-style: normal; }
   min-height: 100vh; display: flex; flex-direction: column;
   justify-content: center; padding: 8rem 3rem 4rem;
   position: relative; z-index: 1;
-  max-width: 1100px; margin: 0 auto;
+  max-width: 1400px; margin: 0 auto;
+  overflow: hidden;
 }
-.hero-inner { max-width: 720px; }
+.hero-inner { max-width: 640px; position: relative; z-index: 2; }
+
+/* ---- Stripe-style wave canvas ---- */
+.wave-wrapper {
+  position: absolute;
+  top: 0; right: -60px; bottom: 0;
+  width: 55%;
+  pointer-events: none;
+  z-index: 1;
+  /* fade left edge into bg */
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 18%, black 50%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 18%, black 50%);
+}
+#waveCanvas {
+  width: 100%; height: 100%;
+  display: block;
+}
+
+/* ---- Ticker (Stripe GDP line style) ---- */
+.hero-ticker {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-mono); font-size: 0.78rem;
+  color: var(--text-dim); margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+}
+.ticker-label { color: var(--text-dim); }
+.ticker-value { color: var(--accent); font-weight: 500; }
+
+/* ---- Trusted logos row (Stripe style) ---- */
+.trusted-row {
+  margin-top: 3rem; padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.trusted-label {
+  display: block; font-family: var(--font-mono);
+  font-size: 0.7rem; color: var(--text-dim);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.trusted-logos {
+  display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;
+}
+.trusted-logo {
+  font-family: var(--font-mono); font-size: 0.85rem;
+  font-weight: 500; color: var(--text-dim);
+  letter-spacing: 0.04em;
+  transition: color var(--transition);
+}
+.trusted-logo:hover { color: var(--accent); }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.6rem;
   font-family: var(--font-mono); font-size: 0.8rem;
@@ -646,10 +429,13 @@ em { color: var(--accent); font-style: normal; }
   .profile-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .container { padding: 0 1.5rem; }
   .section { padding: 4rem 0; }
+  .wave-wrapper { width: 100%; right: 0; opacity: 0.35; }
+  .trusted-logos { gap: 1rem; }
 }
 @media (max-width: 600px) {
   .hero-name { font-size: 2.8rem; }
   .stat-card { padding: 1rem; }
   .tl-header { flex-direction: column; }
   .timeline-item { gap: 1rem; }
+  .wave-wrapper { display: none; }
 }
