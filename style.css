@@ -1,116 +1,655 @@
-html{
-scroll-behavior:smooth;
+
+
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Gajapathy Dasarathan | Portfolio</title> <link rel="stylesheet" href="style.css"> </head> <body> <header> <h1>Gajapathy Dasarathan</h1> <p>Investment Reporting & Financial Reporting Professional</p> </header> <nav> <a hre
+
+pasted
+
+I have developed my website using the github. I need to enhance the interface of the website using Claude. I have index.html, style.css, script.js and README.md
+
+I will provide each creative via prompts idea of through chains of thoughts prompts user task is to add the code to enhance the websites. 
+
+For your reference , i have added the index.html as snip, and below i have pasted the script.js codes
+"const profile = {
+name: "Gajapathy Dasarathan",
+title: "Investment Reporting & Financial Reporting Professional",
+summary: "Investment Reporting professional experienced in Private Equity, Hedge Funds and Separate Accounts. Strong interest in AI automation in finance including building Custom GPT tools for fund fact review and reporting efficiency.",
+contact: "Email: gajapathy165@gmail.com | Phone: +91 93454 65667 | Chennai, India",
+skills: [
+"Financial Reporting",
+"Private Equity",
+"Hedge Funds",
+"Mutual Funds",
+"US GAAP",
+"IFRS",
+"Power BI",
+"SQL",
+"MS Excel",
+"MS Access",
+"AI Automation",
+"Process Improvement",
+"Investment Platforms"
+],
+experience: [
+{
+role:"Investment Reporting Analyst",
+company:"Empower – Bengaluru",
+period:"May 2025 – Present",
+desc:"Preparing and reviewing mutual fund financial statements under US GAAP, automating fund fact reviews using Custom GPT tools and validating reporting data using SQL."
+},
+{
+role:"Associate 2",
+company:"State Street – Chennai",
+period:"Oct 2022 – Apr 2025",
+desc:"Prepared fund level financial statements for Private Equity, CLOs, REITs, Hedge Funds and Fund of Funds under US GAAP and IFRS."
+},
+{
+role:"Intern",
+company:"Rajesh and Ganesh Chartered Accountant – Chennai",
+period:"Aug 2021 – Feb 2022",
+desc:"Worked on forensic audit, cost audit, product costing and MIS reporting."
+}
+],
+education: [
+"CMA Intermediate – Institute of Cost Accountants of India",
+"B.Com – DG Vaishnav College"
+]
+};
+// Populate profile
+document.getElementById("name").innerText = profile.name;
+document.getElementById("title").innerText = profile.title;
+document.getElementById("summary").innerText = profile.summary;
+document.getElementById("contact").innerText = profile.contact;
+// Skills
+const skillsList = document.getElementById("skillsList");
+profile.skills.forEach(skill=>{
+let li=document.createElement("li");
+li.innerText=skill;
+skillsList.appendChild(li);
+});
+// Experience
+const experienceList=document.getElementById("experienceList");
+profile.experience.forEach(job=>{
+let div=document.createElement("div");
+let title=document.createElement("h3");
+title.innerText=job.role;
+let company=document.createElement("p");
+company.innerText=job.company + " | " + job.period;
+let desc=document.createElement("p");
+desc.innerText=job.desc;
+div.appendChild(title);
+div.appendChild(company);
+div.appendChild(desc);
+experienceList.appendChild(div);
+});
+// Education
+const educationList=document.getElementById("educationList");
+profile.education.forEach(ed=>{
+let li=document.createElement("li");
+li.innerText=ed;
+educationList.appendChild(li);
+});
+// Microblog example
+const posts=[
+{
+title:"What is Fund Accounting?",
+text:"Fund accounting tracks assets and liabilities of investment funds separately for each investor group."
+},
+{
+title:"US GAAP vs IFRS",
+text:"US GAAP is rule based accounting while IFRS focuses on principles."
+}
+];
+const blog=document.getElementById("blogPosts");
+posts.forEach(post=>{
+let div=document.createElement("div");
+let title=document.createElement("h3");
+title.innerText=post.title;
+let text=document.createElement("p");
+text.innerText=post.text;
+div.appendChild(title);
+div.appendChild(text);
+blog.appendChild(div);
+});"
+
+style.css
+"const profile = {
+name: "Gajapathy Dasarathan",
+title: "Investment Reporting & Financial Reporting Professional",
+summary: "Investment Reporting professional experienced in Private Equity, Hedge Funds and Separate Accounts. Strong interest in AI automation in finance including building Custom GPT tools for fund fact review and reporting efficiency.",
+contact: "Email: gajapathy165@gmail.com | Phone: +91 93454 65667 | Chennai, India",
+skills: [
+"Financial Reporting",
+"Private Equity",
+"Hedge Funds",
+"Mutual Funds",
+"US GAAP",
+"IFRS",
+"Power BI",
+"SQL",
+"MS Excel",
+"MS Access",
+"AI Automation",
+"Process Improvement",
+"Investment Platforms"
+],
+experience: [
+{
+role:"Investment Reporting Analyst",
+company:"Empower – Bengaluru",
+period:"May 2025 – Present",
+desc:"Preparing and reviewing mutual fund financial statements under US GAAP, automating fund fact reviews using Custom GPT tools and validating reporting data using SQL."
+},
+{
+role:"Associate 2",
+company:"State Street – Chennai",
+period:"Oct 2022 – Apr 2025",
+desc:"Prepared fund level financial statements for Private Equity, CLOs, REITs, Hedge Funds and Fund of Funds under US GAAP and IFRS."
+},
+{
+role:"Intern",
+company:"Rajesh and Ganesh Chartered Accountant – Chennai",
+period:"Aug 2021 – Feb 2022",
+desc:"Worked on forensic audit, cost audit, product costing and MIS reporting."
+}
+],
+education: [
+"CMA Intermediate – Institute of Cost Accountants of India",
+"B.Com – DG Vaishnav College"
+]
+};
+// Populate profile
+document.getElementById("name").innerText = profile.name;
+document.getElementById("title").innerText = profile.title;
+document.getElementById("summary").innerText = profile.summary;
+document.getElementById("contact").innerText = profile.contact;
+// Skills
+const skillsList = document.getElementById("skillsList");
+profile.skills.forEach(skill=>{
+let li=document.createElement("li");
+li.innerText=skill;
+skillsList.appendChild(li);
+});
+// Experience
+const experienceList=document.getElementById("experienceList");
+profile.experience.forEach(job=>{
+let div=document.createElement("div");
+let title=document.createElement("h3");
+title.innerText=job.role;
+let company=document.createElement("p");
+company.innerText=job.company + " | " + job.period;
+let desc=document.createElement("p");
+desc.innerText=job.desc;
+div.appendChild(title);
+div.appendChild(company);
+div.appendChild(desc);
+experienceList.appendChild(div);
+});
+// Education
+const educationList=document.getElementById("educationList");
+profile.education.forEach(ed=>{
+let li=document.createElement("li");
+li.innerText=ed;
+educationList.appendChild(li);
+});
+// Microblog example
+const posts=[
+{
+title:"What is Fund Accounting?",
+text:"Fund accounting tracks assets and liabilities of investment funds separately for each investor group."
+},
+{
+title:"US GAAP vs IFRS",
+text:"US GAAP is rule based accounting while IFRS focuses on principles."
+}
+];
+const blog=document.getElementById("blogPosts");
+posts.forEach(post=>{
+let div=document.createElement("div");
+let title=document.createElement("h3");
+title.innerText=post.title;
+let text=document.createElement("p");
+text.innerText=post.text;
+div.appendChild(title);
+div.appendChild(text);
+blog.appendChild(div);
+});"
+
+Show more
+5:18 pm
+
+Check frontend design skill
+Check frontend design skill
+I can see your portfolio's structure clearly. Let me build a significantly enhanced version with a striking, professional aesthetic — I'll create all three files for you to drop into your GitHub repo.
+
+
+Created 3 files, ran a command, read a file
+Created 3 files, ran a command, read a file
+Here are all three enhanced files ready to drop into your GitHub repo. Here's what was redesigned and added:
+
+Visual Theme — Refined Dark Financial
+
+Deep dark background (
+#0a0c10) with a subtle grid overlay and two floating ambient orbs (gold + blue) that follow the mouse
+Gold accent (
+#c9a84c) throughout — professional and distinctive for finance
+Playfair Display (serif) for headings, DM Sans for body, DM Mono for labels/tags
+New UI Components
+
+Fixed navbar with blur backdrop + scroll shrink effect, plus a mobile hamburger menu
+Hero section with animated "Available" badge, large typographic name, and CTA buttons
+4-stat counter row (animated numbers on scroll)
+Skills rendered as categorised cards with colour-coded tags (gold for AI, blue for standards)
+Timeline layout for experience with a glowing dot for your current role
+Education cards, language level badges, and styled contact cards with hover slide effect
+Interactions (script.js)
+
+Scroll-reveal animations on every section with stagger delays
+Active nav link highlighting based on scroll position
+Animated number counters for the stat cards
+Subtle parallax on the background orbs
+Just replace your three files and push to GitHub — no other changes needed.
+
+Index
+Code · HTML 
+Style
+Code · CSS 
+Script
+JS 
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Style · CSS
+Copy
+
+/* ============================================
+   GAJAPATHY DASARATHAN — PORTFOLIO CSS
+   Theme: Refined Dark Financial Professional
+   ============================================ */
+
+:root {
+  --bg: #0a0c10;
+  --bg-alt: #0e1117;
+  --surface: #141720;
+  --surface-2: #1c2130;
+  --border: rgba(255,255,255,0.07);
+  --text: #e8eaf0;
+  --text-muted: #7a8399;
+  --text-dim: #4a5568;
+  --accent: #c9a84c;
+  --accent-light: #e8c96a;
+  --accent-dim: rgba(201,168,76,0.12);
+  --blue: #4a90d9;
+  --blue-dim: rgba(74,144,217,0.1);
+  --green: #52b788;
+  --red: #e07070;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.6);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body{
-font-family: "Segoe UI", Arial, sans-serif;
-margin:0;
-background:#f4f6f9;
-color:#333;
-line-height:1.6;
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+strong { color: var(--accent-light); font-weight: 500; }
+em { color: var(--accent); font-style: normal; }
+
+/* ---- Background ---- */
+.bg-grid {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.bg-orb {
+  position: fixed; z-index: 0; pointer-events: none;
+  border-radius: 50%; filter: blur(120px); opacity: 0.18;
+}
+.orb-1 {
+  width: 600px; height: 600px;
+  top: -150px; right: -150px;
+  background: radial-gradient(circle, #c9a84c, transparent 70%);
+}
+.orb-2 {
+  width: 500px; height: 500px;
+  bottom: 20%; left: -200px;
+  background: radial-gradient(circle, #4a90d9, transparent 70%);
 }
 
-/* Header */
-
-header{
-background:#0a192f;
-color:white;
-text-align:center;
-padding:50px 20px;
+/* ---- Container ---- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative; z-index: 1;
 }
 
-header h1{
-margin:0;
-font-size:32px;
+/* ---- Navbar ---- */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 3rem;
+  background: rgba(10,12,16,0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+.navbar.scrolled {
+  padding: 0.9rem 3rem;
+  background: rgba(10,12,16,0.95);
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-link {
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--text-muted); letter-spacing: 0.04em;
+  transition: color var(--transition);
+}
+.nav-link:hover { color: var(--text); }
+.nav-cta {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px; color: var(--accent);
+}
+.nav-cta:hover { background: var(--accent-dim); color: var(--accent-light); }
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text-muted); border-radius: 2px; transition: var(--transition); }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  flex-direction: column; padding: 1rem 2rem 2rem;
+}
+.mobile-menu.open { display: flex; }
+.mob-link { padding: 0.75rem 0; font-size: 1rem; font-weight: 500; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+.mob-link:last-child { border-bottom: none; }
+.mob-link:hover { color: var(--accent); }
+
+/* ---- Hero ---- */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; padding: 8rem 3rem 4rem;
+  position: relative; z-index: 1;
+  max-width: 1100px; margin: 0 auto;
+}
+.hero-inner { max-width: 720px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--green); border: 1px solid rgba(82,183,136,0.3);
+  background: rgba(82,183,136,0.07);
+  padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem;
+}
+.badge-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 10px var(--green);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 900; line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+.name-line { display: block; }
+.accent-line { color: var(--accent); }
+.hero-title {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted); font-weight: 400;
+  margin-bottom: 0.75rem; letter-spacing: 0.02em;
+}
+.hero-sub {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--text-dim); margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex; align-items: center;
+  padding: 0.8rem 2rem; border-radius: 8px;
+  font-size: 0.9rem; font-weight: 500;
+  transition: all var(--transition); cursor: pointer;
+}
+.btn-primary {
+  background: var(--accent); color: var(--bg);
+}
+.btn-primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+}
+.btn-outline {
+  border: 1px solid var(--border); color: var(--text-muted);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--accent); color: var(--accent);
+  transform: translateY(-2px);
 }
 
-header p{
-opacity:0.9;
+/* Scroll indicator */
+.hero-scroll {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.5rem; position: absolute; bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%); color: var(--text-dim);
+  font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em;
+  animation: bob 2.5s ease-in-out infinite;
+}
+@keyframes bob { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+.scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
 }
 
-/* Navigation */
-
-nav{
-background:white;
-display:flex;
-justify-content:center;
-gap:25px;
-padding:15px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-position:sticky;
-top:0;
-z-index:100;
+/* ---- Sections ---- */
+.section { padding: 6rem 0; position: relative; z-index: 1; }
+.section-alt { background: rgba(14,17,23,0.8); }
+.section-label {
+  font-family: var(--font-mono); font-size: 0.75rem;
+  color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700; color: var(--text);
+  margin-bottom: 3rem; line-height: 1.2;
 }
 
-nav a{
-text-decoration:none;
-color:#0a192f;
-font-weight:600;
-transition:0.3s;
+/* ---- Profile ---- */
+.profile-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: start; }
+.profile-text p { color: var(--text-muted); margin-bottom: 1.2rem; font-size: 1.05rem; }
+.profile-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.stat-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.4rem;
+  transition: var(--transition);
+}
+.stat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 0.8rem; color: var(--text-dim); }
+
+/* ---- Skills ---- */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.skill-group {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.75rem;
+  transition: var(--transition);
+}
+.skill-group:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); box-shadow: var(--shadow); }
+.skill-group-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+.skill-group h3 { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+  font-size: 0.78rem; padding: 0.35rem 0.8rem;
+  border-radius: 100px; background: var(--surface-2);
+  border: 1px solid var(--border); color: var(--text-muted);
+  font-family: var(--font-mono);
+  transition: var(--transition);
+}
+.tag:hover { color: var(--text); border-color: var(--text-dim); }
+.tag-accent { background: var(--blue-dim); border-color: rgba(74,144,217,0.25); color: var(--blue); }
+.tag-gold { background: var(--accent-dim); border-color: rgba(201,168,76,0.25); color: var(--accent); }
+
+/* ---- Timeline ---- */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.timeline-item { display: grid; grid-template-columns: 40px 1fr; gap: 1.5rem; }
+.timeline-marker { display: flex; flex-direction: column; align-items: center; }
+.tl-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--text-dim); background: var(--bg);
+  flex-shrink: 0; margin-top: 1.5rem;
+  transition: var(--transition);
+}
+.tl-dot.active { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 16px rgba(201,168,76,0.4); }
+.tl-line { flex: 1; width: 1px; background: var(--border); margin: 6px 0; }
+.timeline-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+.timeline-card:hover { border-color: rgba(201,168,76,0.25); box-shadow: var(--shadow); }
+.tl-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+.tl-period {
+  font-family: var(--font-mono); font-size: 0.75rem;
+  color: var(--text-dim); letter-spacing: 0.05em;
+  display: block; margin-bottom: 0.4rem;
+}
+.tl-period.current { color: var(--accent); }
+.tl-role { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--text); }
+.tl-company { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.2rem; }
+.tl-badge {
+  background: var(--accent-dim); border: 1px solid rgba(201,168,76,0.3);
+  color: var(--accent); font-size: 0.7rem; font-weight: 600;
+  padding: 0.3rem 0.8rem; border-radius: 100px;
+  font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase;
+  white-space: nowrap; flex-shrink: 0;
+}
+.tl-bullets { display: flex; flex-direction: column; gap: 0.6rem; }
+.tl-bullets li {
+  font-size: 0.9rem; color: var(--text-muted); padding-left: 1.2rem;
+  position: relative; line-height: 1.6;
+}
+.tl-bullets li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--accent); font-size: 0.75rem; top: 0.05rem;
 }
 
-nav a:hover{
-color:#0077ff;
+/* ---- Education ---- */
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.edu-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem;
+  display: flex; align-items: flex-start; gap: 1.2rem;
+  transition: var(--transition);
+}
+.edu-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); box-shadow: var(--shadow); }
+.edu-icon { font-size: 2rem; flex-shrink: 0; }
+.edu-body h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+.edu-inst { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.edu-year {
+  font-family: var(--font-mono); font-size: 0.75rem;
+  background: var(--accent-dim); color: var(--accent);
+  padding: 0.2rem 0.7rem; border-radius: 100px;
+  border: 1px solid rgba(201,168,76,0.25);
 }
 
-/* Sections */
+/* Languages */
+.lang-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+.lang-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 0.75rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.lang-name { font-size: 0.9rem; font-weight: 500; color: var(--text); }
+.lang-level {
+  font-family: var(--font-mono); font-size: 0.7rem;
+  padding: 0.2rem 0.6rem; border-radius: 100px;
+}
+.lang-level.native { background: rgba(82,183,136,0.12); color: var(--green); border: 1px solid rgba(82,183,136,0.25); }
+.lang-level.fluent { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(74,144,217,0.25); }
+.lang-level.intermediate { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(201,168,76,0.25); }
+.lang-level.beginner { background: var(--surface-2); color: var(--text-dim); border: 1px solid var(--border); }
 
-section{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
+/* ---- Contact ---- */
+.contact-section { background: var(--bg); }
+.contact-sub { color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.05rem; }
+.contact-cards { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; }
+.contact-card {
+  display: flex; align-items: center; gap: 1.25rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.25rem 1.5rem;
+  transition: var(--transition); cursor: pointer;
+}
+.contact-card:hover { border-color: var(--accent); transform: translateX(6px); }
+.contact-icon { font-size: 1.5rem; flex-shrink: 0; }
+.contact-label { display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.contact-value { font-size: 0.95rem; color: var(--text); }
+
+/* ---- Footer ---- */
+.footer {
+  border-top: 1px solid var(--border); padding: 2rem 0;
+  text-align: center; color: var(--text-dim);
+  font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.04em;
+  position: relative; z-index: 1;
 }
 
-/* Section title */
-
-section h2{
-border-left:5px solid #0077ff;
-padding-left:10px;
-margin-bottom:20px;
+/* ---- Reveal animations ---- */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* Cards */
-
-ul{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .navbar { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding: 7rem 1.5rem 4rem; }
+  .profile-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .container { padding: 0 1.5rem; }
+  .section { padding: 4rem 0; }
 }
-
-/* Experience blocks */
-
-#experience ul{
-margin-bottom:25px;
-}
-
-/* Contact */
-
-#contact p{
-font-size:16px;
-}
-
-/* Footer */
-
-footer{
-text-align:center;
-background:#0a192f;
-color:white;
-padding:20px;
-margin-top:40px;
-}
-
-/* Responsive UX */
-
-@media(max-width:700px){
-
-nav{
-flex-wrap:wrap;
-gap:10px;
-}
-
-header h1{
-font-size:24px;
-}
-
+@media (max-width: 600px) {
+  .hero-name { font-size: 2.8rem; }
+  .stat-card { padding: 1rem; }
+  .tl-header { flex-direction: column; }
+  .timeline-item { gap: 1rem; }
 }
