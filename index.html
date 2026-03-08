@@ -3,288 +3,866 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gajapathy Dasarathan | Investment Reporting Professional</title>
+<title>Gajapathy Dasarathan · Investment Reporting Professional</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white:#ffffff; --snow:#f7f9fc; --ice:#eef3f8; --mist:#dde6f0;
+  --slate:#8fa3b8; --stone:#4a6072; --ink:#1a2332; --deep:#0d1821;
+  --teal:#0f7c7c; --forest:#1a5c38; --moss:#2d7a4f; --fern:#4aab78;
+  --ocean:#0a5a8c; --wave:#1d8bb0; --sky:#4db8d4;
+  --coral:#e85d4a; --sand:#c4924a; --gold:#b8860b; --amber:#d4a017;
+  --dusk:#6b3fa0; --twilight:#9b59b6;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'DM Sans',system-ui,sans-serif;
+  --fm:'DM Mono',monospace;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--white);color:var(--ink);overflow-x:hidden;cursor:none}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit}
+
+/* CURSOR */
+#cr{position:fixed;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(15,124,124,.45);background:rgba(15,124,124,.04);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s}
+#cd{position:fixed;width:6px;height:6px;border-radius:50%;background:var(--teal);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 8px rgba(15,124,124,.7)}
+#cr.hov{width:54px;height:54px;border-color:rgba(15,124,124,.7);background:rgba(15,124,124,.07)}
+#rc{position:fixed;inset:0;pointer-events:none;z-index:9997}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(255,255,255,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(15,124,124,.1);transition:all .3s var(--ease)}
+.nav.solid{background:rgba(255,255,255,.97);box-shadow:0 2px 20px rgba(26,35,50,.08)}
+.nav-brand{font-family:var(--fd);font-size:1.45rem;font-weight:700;color:var(--teal);letter-spacing:.03em}
+.nav-brand span{color:var(--forest)}
+.nav-links{display:flex;gap:.2rem;align-items:center}
+.na{font-size:.82rem;font-weight:500;color:var(--stone);padding:.4rem .85rem;border-radius:8px;transition:all .2s var(--ease);letter-spacing:.02em}
+.na:hover,.na.act{color:var(--teal);background:rgba(15,124,124,.08)}
+.ncta{margin-left:.5rem;background:var(--teal);color:white;padding:.45rem 1.15rem;border-radius:8px;font-size:.82rem;font-weight:600;transition:all .2s var(--ease)}
+.ncta:hover{background:var(--forest);transform:translateY(-1px)}
+.nbg{display:none;flex-direction:column;gap:4.5px;background:none;border:none;cursor:pointer;padding:5px}
+.nbg span{display:block;width:20px;height:1.5px;background:var(--stone);border-radius:2px;transition:all .25s}
+.mob{display:none;position:fixed;top:60px;left:0;right:0;z-index:499;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--mist);padding:1rem 1.5rem 1.5rem;flex-direction:column;gap:.25rem}
+.mob.open{display:flex}
+.ma{padding:.65rem .75rem;color:var(--stone);font-weight:500;font-size:.9rem;border-radius:8px}
+.ma:hover{color:var(--teal);background:rgba(15,124,124,.07)}
+
+/* SCENE */
+.scene{position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.sc{position:absolute;inset:0;z-index:0;pointer-events:none}
+.scn{position:relative;z-index:10}
+
+/* HERO */
+#s0{background:linear-gradient(160deg,#f0f7f4 0%,#e8f4f0 40%,#f5f0ea 100%)}
+.hw{max-width:1160px;margin:0 auto;padding:9rem 2.5rem 5rem;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center}
+.hlbl{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--fm);font-size:.72rem;color:var(--forest);background:rgba(26,92,56,.08);border:1px solid rgba(26,92,56,.2);padding:.35rem 1rem;border-radius:100px;margin-bottom:1.75rem;letter-spacing:.06em;text-transform:uppercase}
+.ldot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.25);animation:lp 2s infinite}
+@keyframes lp{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.25)}50%{box-shadow:0 0 0 6px rgba(34,197,94,.1)}}
+.hn{font-family:var(--fd);font-size:clamp(3rem,6.5vw,5.5rem);font-weight:900;line-height:1;color:var(--ink);letter-spacing:-.025em;margin-bottom:.6rem}
+.hn em{font-style:italic;color:var(--teal);display:block}
+.ht{font-size:1.05rem;color:var(--stone);font-weight:400;margin-bottom:.5rem;line-height:1.6}
+.hm{font-family:var(--fm);font-size:.72rem;color:var(--slate);letter-spacing:.05em;margin-bottom:2.5rem}
+.hm span{color:var(--teal)}
+.hbtns{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.bf{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 2rem;border-radius:10px;background:var(--teal);color:white;font-weight:600;font-size:.88rem;box-shadow:0 4px 20px rgba(15,124,124,.3);transition:all .25s var(--ease)}
+.bf:hover{background:var(--forest);transform:translateY(-2px);box-shadow:0 8px 28px rgba(15,124,124,.35)}
+.bo{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 2rem;border-radius:10px;border:1.5px solid rgba(26,92,56,.3);color:var(--forest);font-weight:500;font-size:.88rem;transition:all .25s var(--ease)}
+.bo:hover{border-color:var(--forest);background:rgba(26,92,56,.06);transform:translateY(-2px)}
+.hpl{border-top:1px solid var(--mist);padding-top:2rem}
+.pll{font-family:var(--fm);font-size:.62rem;color:var(--slate);text-transform:uppercase;letter-spacing:.14em;margin-bottom:.9rem;display:block}
+.plc{display:flex;flex-wrap:wrap;gap:.5rem}
+.pc{font-family:var(--fm);font-size:.68rem;padding:.3rem .8rem;border-radius:100px;background:rgba(15,124,124,.07);border:1px solid rgba(15,124,124,.18);color:var(--teal);font-weight:500;transition:all .2s}
+.pc:hover{background:rgba(15,124,124,.14)}
+
+/* Hero card */
+.hcard{background:white;border:1px solid rgba(15,124,124,.12);border-radius:24px;padding:2.5rem 2rem;box-shadow:0 8px 40px rgba(26,35,50,.08);position:relative;overflow:hidden}
+.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--forest),var(--wave))}
+.hct{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:1.5rem}
+.hcs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.75rem}
+.hcst{background:var(--snow);border:1px solid var(--ice);border-radius:14px;padding:1.1rem 1rem;text-align:center}
+.hcn{font-family:var(--fd);font-size:2rem;font-weight:900;color:var(--teal);line-height:1;display:block}
+.hcl{font-family:var(--fm);font-size:.63rem;color:var(--slate);margin-top:.3rem;display:block;text-transform:uppercase;letter-spacing:.06em}
+.hcsk{display:flex;flex-direction:column;gap:.6rem}
+.hcsk-row{display:flex;align-items:center;gap:.7rem}
+.hcsk-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.hcsk-n{font-size:.82rem;color:var(--stone);font-weight:500}
+
+/* Scroll hint */
+.sh{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.62rem;color:var(--slate);letter-spacing:.12em;text-transform:uppercase;animation:fl 3s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+.sb{width:1px;height:44px;background:linear-gradient(to bottom,var(--teal),transparent)}
+
+/* Scene label */
+.slbl{position:absolute;bottom:2rem;right:3rem;z-index:10;font-family:var(--fm);font-size:.6rem;color:var(--slate);letter-spacing:.2em;text-transform:uppercase;opacity:.5}
+
+/* SHARED */
+.cw{max-width:1100px;margin:0 auto;padding:7rem 2.5rem}
+.eye{font-family:var(--fm);font-size:.68rem;color:var(--teal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.65rem;display:flex;align-items:center;gap:.75rem}
+.eye::after{content:'';flex:1;max-width:60px;height:1px;background:linear-gradient(to right,var(--teal),transparent)}
+.stitle{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);margin-bottom:3rem;line-height:1.15}
+
+/* Tags */
+.tag{display:inline-block;font-family:var(--fm);font-size:.68rem;padding:.28rem .72rem;border-radius:100px;background:var(--snow);border:1px solid var(--mist);color:var(--stone);font-weight:500;transition:all .2s}
+.tag:hover{background:rgba(15,124,124,.08);border-color:rgba(15,124,124,.25);color:var(--teal)}
+.tag.tc{background:rgba(15,124,124,.08);border-color:rgba(15,124,124,.2);color:var(--teal)}
+.tag.gc{background:rgba(26,92,56,.08);border-color:rgba(26,92,56,.2);color:var(--forest)}
+.tag.bc{background:rgba(10,90,140,.08);border-color:rgba(10,90,140,.2);color:var(--ocean)}
+.tag.gd{background:rgba(184,134,11,.08);border-color:rgba(184,134,11,.2);color:var(--gold)}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* PROFILE */
+#s1{background:linear-gradient(145deg,#f0f8ff 0%,#e8f5f5 50%,#f0f7f4 100%)}
+.pg{display:grid;grid-template-columns:1.6fr 1fr;gap:4rem;align-items:start}
+.pb p{color:var(--stone);line-height:1.85;margin-bottom:1.15rem;font-size:.97rem}
+.pb p strong{color:var(--forest);font-weight:600}
+.pb p em{color:var(--teal);font-style:normal;font-weight:500}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.st{background:white;border:1px solid var(--mist);border-radius:16px;padding:1.4rem 1.2rem;box-shadow:0 2px 12px rgba(26,35,50,.05);transition:all .3s var(--ease);text-align:center}
+.st:hover{border-color:rgba(15,124,124,.25);transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,124,124,.1)}
+.sn{font-family:var(--fd);font-size:2.4rem;font-weight:900;color:var(--teal);line-height:1;display:block}
+.su{font-family:var(--fd);font-size:1.5rem;color:var(--teal)}
+.sl{font-family:var(--fm);font-size:.62rem;color:var(--slate);display:block;margin-top:.4rem;text-transform:uppercase;letter-spacing:.07em}
+
+/* SKILLS */
+#s2{background:linear-gradient(155deg,#f5fffe 0%,#eaf6f6 40%,#f0f8ff 100%)}
+.skgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.skc{background:white;border:1px solid rgba(26,35,50,.07);border-radius:18px;padding:1.6rem 1.5rem;box-shadow:0 2px 16px rgba(26,35,50,.05);transition:all .3s var(--ease);position:relative;overflow:hidden}
+.skc::after{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:var(--bc,linear-gradient(90deg,var(--teal),var(--wave)));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.skc:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(26,35,50,.1);border-color:rgba(15,124,124,.18)}
+.skc:hover::after{transform:scaleX(1)}
+.ski{font-size:1.8rem;margin-bottom:.7rem}
+.skc h3{font-family:var(--fd);font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.85rem}
+.sktg{display:flex;flex-wrap:wrap;gap:.4rem}
+
+/* EXPERIENCE */
+#s3{background:linear-gradient(145deg,#f8f5ff 0%,#f0f4ff 45%,#f5f8ff 100%)}
+.tl{display:flex;flex-direction:column}
+.tli{display:grid;grid-template-columns:48px 1fr}
+.tll{display:flex;flex-direction:column;align-items:center;padding-top:2.2rem}
+.tld{width:16px;height:16px;border-radius:50%;border:2.5px solid var(--mist);background:white;flex-shrink:0;position:relative;z-index:2;transition:all .3s var(--ease)}
+.tld.now{border-color:var(--teal);background:var(--teal);box-shadow:0 0 0 5px rgba(15,124,124,.15)}
+.tlln{flex:1;width:1.5px;background:var(--mist);min-height:24px}
+.tlb{padding:1.5rem 0 2.5rem 1.25rem}
+.tlc{background:white;border:1px solid rgba(26,35,50,.07);border-radius:18px;padding:1.75rem;box-shadow:0 2px 16px rgba(26,35,50,.05);transition:all .3s var(--ease)}
+.tlc:hover{box-shadow:0 10px 36px rgba(26,35,50,.09);border-color:rgba(15,124,124,.18);transform:translateX(4px)}
+.tlh{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.1rem}
+.tldt{font-family:var(--fm);font-size:.68rem;color:var(--slate);display:block;margin-bottom:.3rem;letter-spacing:.04em}
+.tldt.now{color:var(--teal);font-weight:500}
+.tlr{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:.2rem}
+.tlo{font-size:.84rem;color:var(--stone)}
+.tlbg{flex-shrink:0;background:rgba(15,124,124,.1);color:var(--teal);border:1px solid rgba(15,124,124,.22);font-family:var(--fm);font-size:.62rem;font-weight:600;padding:.28rem .8rem;border-radius:100px;text-transform:uppercase;letter-spacing:.1em}
+.tlps{display:flex;flex-direction:column;gap:.55rem}
+.tlp{font-size:.875rem;color:var(--stone);line-height:1.72;padding-left:1.1rem;position:relative}
+.tlp::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--teal)}
+.tlp strong{color:var(--forest)}
+.tlp em{color:var(--amber);font-style:normal;font-weight:500}
+
+/* CERTS */
+#s4{background:linear-gradient(150deg,#fff9f0 0%,#fef3e8 45%,#fff5f0 100%)}
+.cgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.cc{background:white;border:1px solid rgba(26,35,50,.07);border-radius:18px;padding:1.6rem 1.5rem;display:flex;gap:1.15rem;box-shadow:0 2px 16px rgba(26,35,50,.05);transition:all .3s var(--ease)}
+.cc:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(184,134,11,.12);border-color:rgba(184,134,11,.22)}
+.cbdg{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.cbdg.an{background:#000;color:#fff;font-family:var(--fm);font-size:.7rem}
+.cbdg.li{background:#0a66c2;color:#fff;font-size:1.4rem;font-family:var(--fd)}
+.cbb h3{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.cis{font-size:.78rem;color:var(--gold);font-weight:600;margin-bottom:.2rem}
+.cdt{font-family:var(--fm);font-size:.65rem;color:var(--slate);margin-bottom:.75rem}
+.ctg{display:flex;flex-wrap:wrap;gap:.35rem}
+
+/* EDUCATION */
+#s5{background:linear-gradient(150deg,#f5f0ff 0%,#ede8ff 45%,#f0eeff 100%)}
+.egr{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-bottom:3rem}
+.edc{background:white;border:1px solid rgba(26,35,50,.07);border-radius:18px;padding:1.75rem;display:flex;gap:1.15rem;box-shadow:0 2px 16px rgba(26,35,50,.05);transition:all .3s var(--ease)}
+.edc:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(107,63,160,.12);border-color:rgba(107,63,160,.2)}
+.edi{font-size:2rem;flex-shrink:0}
+.edc h3{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.edin{font-size:.82rem;color:var(--stone);margin-bottom:.65rem}
+.edm{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.edy{font-family:var(--fm);font-size:.68rem;background:rgba(107,63,160,.09);color:var(--dusk);border:1px solid rgba(107,63,160,.2);padding:.22rem .7rem;border-radius:100px}
+.edsc{font-family:var(--fm);font-size:.68rem;color:var(--forest);font-weight:600}
+.lsec{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:1rem}
+.lr{display:flex;flex-wrap:wrap;gap:.75rem}
+.lp{display:flex;align-items:center;gap:.65rem;background:white;border:1px solid var(--mist);border-radius:12px;padding:.6rem 1rem;box-shadow:0 1px 8px rgba(26,35,50,.04);transition:all .2s}
+.lp:hover{border-color:rgba(107,63,160,.3)}
+.ln{font-weight:600;font-size:.85rem;color:var(--ink)}
+.ll{font-family:var(--fm);font-size:.63rem;padding:.18rem .55rem;border-radius:100px}
+.ll.na{background:rgba(26,92,56,.1);color:var(--forest);border:1px solid rgba(26,92,56,.2)}
+.ll.fl{background:rgba(10,90,140,.1);color:var(--ocean);border:1px solid rgba(10,90,140,.2)}
+.ll.im{background:rgba(184,134,11,.1);color:var(--gold);border:1px solid rgba(184,134,11,.2)}
+.ll.bg{background:var(--snow);color:var(--slate);border:1px solid var(--mist)}
+
+/* CONTACT */
+#s6{background:linear-gradient(145deg,#f0f7f4 0%,#e8f5f5 50%,#f5f0ea 100%)}
+.cog{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:start}
+.coc{display:flex;flex-direction:column;gap:.9rem}
+.cocd{display:flex;align-items:center;gap:1.1rem;background:white;border:1px solid var(--mist);border-radius:14px;padding:1.15rem 1.35rem;box-shadow:0 2px 12px rgba(26,35,50,.05);transition:all .25s var(--ease)}
+.cocd:hover{transform:translateX(5px);border-color:rgba(15,124,124,.3);box-shadow:0 6px 24px rgba(15,124,124,.1)}
+.coci{font-size:1.35rem;flex-shrink:0}
+.cocl{font-family:var(--fm);font-size:.6rem;color:var(--slate);text-transform:uppercase;letter-spacing:.12em;display:block;margin-bottom:.15rem}
+.cocv{font-size:.88rem;color:var(--ink);font-weight:500}
+
+/* Chatbot */
+.chat{background:white;border:1px solid var(--mist);border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(26,35,50,.09)}
+.chh{display:flex;align-items:center;gap:.9rem;padding:1.1rem 1.4rem;background:linear-gradient(135deg,rgba(15,124,124,.06),rgba(26,92,56,.04));border-bottom:1px solid var(--mist)}
+.chav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--forest));color:white;font-family:var(--fd);font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chn{font-weight:600;font-size:.87rem;color:var(--ink)}
+.chs{font-size:.7rem;color:var(--slate)}
+.chst{margin-left:auto;display:flex;align-items:center;gap:.35rem;font-family:var(--fm);font-size:.63rem;color:#22c55e}
+.chst span{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:lp 2s infinite}
+.chm{height:260px;overflow-y:auto;padding:1.1rem;display:flex;flex-direction:column;gap:.8rem;scroll-behavior:smooth}
+.chm::-webkit-scrollbar{width:4px}
+.chm::-webkit-scrollbar-thumb{background:var(--mist);border-radius:4px}
+.msg{max-width:84%}
+.msg p{font-size:.84rem;line-height:1.65;padding:.7rem .95rem;border-radius:14px}
+.msg.bot p{background:var(--snow);color:var(--ink);border:1px solid var(--mist);border-bottom-left-radius:4px}
+.msg.usr{align-self:flex-end}
+.msg.usr p{background:linear-gradient(135deg,var(--teal),var(--forest));color:white;border-bottom-right-radius:4px}
+.msg.typ p{background:var(--snow);color:var(--slate);font-style:italic;border:1px solid var(--mist)}
+.chq{display:flex;flex-wrap:wrap;gap:.45rem;padding:0 1.1rem .8rem}
+.chq button{font-family:var(--fm);font-size:.63rem;padding:.28rem .75rem;border-radius:100px;border:1px solid rgba(15,124,124,.25);background:rgba(15,124,124,.06);color:var(--teal);cursor:none;transition:all .2s}
+.chq button:hover{background:rgba(15,124,124,.14);border-color:var(--teal)}
+.chi{display:flex;border-top:1px solid var(--mist)}
+.chi input{flex:1;border:none;outline:none;padding:.9rem 1.1rem;font-family:var(--fb);font-size:.84rem;background:transparent;color:var(--ink)}
+.chi input::placeholder{color:var(--slate)}
+.chi button{padding:.9rem 1.1rem;background:var(--teal);color:white;border:none;cursor:none;transition:background .2s;display:flex;align-items:center;justify-content:center}
+.chi button:hover{background:var(--forest)}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.3);text-align:center;padding:2rem;font-family:var(--fm);font-size:.7rem;letter-spacing:.06em;position:relative;z-index:5}
+footer a{color:rgba(255,255,255,.5)}
+footer a:hover{color:var(--sky)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .nbg{display:flex}
+  .hw{grid-template-columns:1fr;padding:8rem 1.75rem 4rem}
+  .hcard{display:none}
+  .pg{grid-template-columns:1fr}
+  .cog{grid-template-columns:1fr}
+  .cw{padding:5rem 1.75rem}
+  body{cursor:auto}
+  #cr,#cd{display:none}
+}
+@media(max-width:600px){
+  .hn{font-size:2.8rem}
+  .sg{grid-template-columns:1fr 1fr}
+  .tli{grid-template-columns:32px 1fr}
+  .hbtns{flex-direction:column}
+  .bf,.bo{justify-content:center}
+  .slbl{display:none}
+}
+</style>
 </head>
 <body>
 
-<!-- Custom liquid cursor -->
-<div id="cursor-outer"></div>
-<div id="cursor-inner"></div>
-<canvas id="rippleCanvas"></canvas>
-
-<!-- FPS Bird-flight canvas -->
-<canvas id="birdCanvas"></canvas>
+<div id="cr"></div>
+<div id="cd"></div>
+<canvas id="rc"></canvas>
 
 <!-- NAV -->
-<nav class="navbar" id="navbar">
-  <div class="nav-logo">GD</div>
+<nav class="nav" id="nav">
+  <div class="nav-brand">G<span>D</span></div>
   <div class="nav-links">
-    <a href="#hero"           class="nav-link">Home</a>
-    <a href="#profile"        class="nav-link">Profile</a>
-    <a href="#skills"         class="nav-link">Skills</a>
-    <a href="#experience"     class="nav-link">Experience</a>
-    <a href="#certifications" class="nav-link">Certifications</a>
-    <a href="#education"      class="nav-link">Education</a>
-    <a href="#contact"        class="nav-link nav-cta">Contact</a>
+    <a href="#s0" class="na act">Home</a>
+    <a href="#s1" class="na">Profile</a>
+    <a href="#s2" class="na">Skills</a>
+    <a href="#s3" class="na">Experience</a>
+    <a href="#s4" class="na">Certifications</a>
+    <a href="#s5" class="na">Education</a>
+    <a href="#s6" class="ncta">Contact</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nbg" id="bg" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#hero"           class="mob-link">Home</a>
-  <a href="#profile"        class="mob-link">Profile</a>
-  <a href="#skills"         class="mob-link">Skills</a>
-  <a href="#experience"     class="mob-link">Experience</a>
-  <a href="#certifications" class="mob-link">Certifications</a>
-  <a href="#education"      class="mob-link">Education</a>
-  <a href="#contact"        class="mob-link">Contact</a>
+<div class="mob" id="mob">
+  <a href="#s0" class="ma">Home</a><a href="#s1" class="ma">Profile</a>
+  <a href="#s2" class="ma">Skills</a><a href="#s3" class="ma">Experience</a>
+  <a href="#s4" class="ma">Certifications</a><a href="#s5" class="ma">Education</a>
+  <a href="#s6" class="ma">Contact</a>
 </div>
 
-<!-- SCENE 1: HERO — Forest Dawn -->
-<section id="hero" class="scene" data-scene="0">
-  <div class="liquid-bg" id="liqBg0"></div>
-  <div class="scene-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow reveal"><span class="dot-live"></span>Available for opportunities</div>
-    <h1 class="hero-name reveal">Gajapathy<br><em>Dasarathan</em></h1>
-    <p class="hero-role reveal">Investment Reporting &amp; Financial Reporting Professional</p>
-    <p class="hero-meta reveal">Chennai, India &nbsp;·&nbsp; 4+ Years &nbsp;·&nbsp; US GAAP · IFRS · AI Automation</p>
-    <div class="hero-btns reveal">
-      <a href="#experience" class="btn-primary">Explore Journey</a>
-      <a href="#contact"    class="btn-ghost">Get in Touch</a>
-    </div>
-    <div class="trusted-row reveal">
-      <span class="trusted-label">Experienced with platforms</span>
-      <div class="trusted-logos">
-        <span>eVestment</span><span>Wilshire</span><span>Broadridge</span>
-        <span>Confluence</span><span>Callan</span><span>Informa</span>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-hint"><div class="scroll-line-anim"></div><span>Scroll to explore</span></div>
-</section>
-
-<!-- SCENE 2: PROFILE — Waterfall -->
-<section id="profile" class="scene" data-scene="1">
-  <div class="liquid-bg" id="liqBg1"></div>
-  <div class="scene-overlay"></div>
-  <div class="container">
-    <div class="section-eyebrow reveal">01 — Profile</div>
-    <h2 class="section-title reveal">About Me</h2>
-    <div class="profile-grid">
-      <div class="profile-text reveal">
-        <p>Investment Reporting and Financial Reporting professional with experience in <strong>Private Equity, Hedge Funds,</strong> and <strong>Separate Accounts.</strong> Strong focus on AI and automation, including building <strong>Custom GPT tools</strong> to automate fund fact reviews and improve accuracy and turnaround time.</p>
-        <p>Experienced in <strong>US GAAP and IFRS</strong> financial statements, KPI reporting, and close coordination with onshore teams. Technically skilled in Excel, MS Access, SQL, Power BI, and investment platforms such as eVestment, Wilshire, Callan, and Broadridge.</p>
-        <p>Recognised by <strong>senior leadership and the Director</strong> at Empower for Custom GPT development and AI integration, and by the <strong>Managing Director</strong> at State Street for quality and process improvements in financial reporting.</p>
-      </div>
-      <div class="profile-stats reveal">
-        <div class="stat-card"><span class="stat-num" data-target="4">0</span><span class="stat-suf">+</span><span class="stat-label">Years Experience</span></div>
-        <div class="stat-card"><span class="stat-num" data-target="3">0</span><span class="stat-suf"></span><span class="stat-label">Major Employers</span></div>
-        <div class="stat-card"><span class="stat-num" data-target="2">0</span><span class="stat-suf"></span><span class="stat-label">Accounting Standards</span></div>
-        <div class="stat-card"><span class="stat-num" style="font-size:1.6rem">AI</span><span class="stat-suf"></span><span class="stat-label">Automation Builder</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SCENE 3: SKILLS — Ocean / Coral Reef -->
-<section id="skills" class="scene" data-scene="2">
-  <div class="liquid-bg" id="liqBg2"></div>
-  <div class="scene-overlay"></div>
-  <div class="container">
-    <div class="section-eyebrow reveal">02 — Skills</div>
-    <h2 class="section-title reveal">Core Competencies</h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal"><div class="skill-icon">📊</div><h3>Financial &amp; Investment Reporting</h3><div class="tags"><span>Financial Reporting</span><span>Private Equity</span><span>Hedge Funds</span><span>Mutual Funds</span><span>CLO</span><span>REITs</span><span>Fund of Funds</span></div></div>
-      <div class="skill-card reveal"><div class="skill-icon">📋</div><h3>Accounting Standards</h3><div class="tags tags-blue"><span>US GAAP</span><span>IFRS</span><span>KPI Preparation</span><span>Balance Sheets</span><span>Income Statements</span><span>Cash Flow</span></div></div>
-      <div class="skill-card reveal"><div class="skill-icon">🤖</div><h3>AI &amp; Automation</h3><div class="tags tags-green"><span>Custom GPT Development</span><span>Process Automation</span><span>AI Integration in Finance</span><span>ChatGPT</span><span>Workflow Optimization</span></div></div>
-      <div class="skill-card reveal"><div class="skill-icon">🛠️</div><h3>Data &amp; Reporting Tools</h3><div class="tags"><span>MS Excel</span><span>SQL</span><span>MS Access</span><span>Power BI</span><span>SAP</span><span>Tally ERP</span><span>TCS ION</span></div></div>
-      <div class="skill-card reveal"><div class="skill-icon">📈</div><h3>Investment Platforms</h3><div class="tags tags-teal"><span>Nasdaq eVestment</span><span>Wilshire</span><span>Callan</span><span>Informa</span><span>Broadridge</span><span>Confluence (IMGD)</span></div></div>
-      <div class="skill-card reveal"><div class="skill-icon">🤝</div><h3>Professional Skills</h3><div class="tags"><span>Onshore–Offshore Coordination</span><span>Stakeholder Communication</span><span>SOP Documentation</span><span>Process Improvement</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SCENE 4: EXPERIENCE — Mountain -->
-<section id="experience" class="scene" data-scene="3">
-  <div class="liquid-bg" id="liqBg3"></div>
-  <div class="scene-overlay"></div>
-  <div class="container">
-    <div class="section-eyebrow reveal">03 — Experience</div>
-    <h2 class="section-title reveal">Professional Journey</h2>
-    <div class="timeline">
-
-      <div class="tl-item reveal">
-        <div class="tl-marker"><div class="tl-dot active"></div><div class="tl-line"></div></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <div><span class="tl-date current-date">May 2025 – Present</span><h3>Investment Reporting Analyst</h3><p class="tl-org">Empower · Bengaluru, Karnataka</p></div>
-            <span class="tl-badge">Current</span>
+<!-- S0: HERO — Forest Dawn -->
+<section class="scene" id="s0">
+  <canvas class="sc" id="c0"></canvas>
+  <div class="scn">
+    <div class="hw">
+      <div>
+        <div class="hlbl rv"><span class="ldot"></span>Available for opportunities</div>
+        <h1 class="hn rv">Gajapathy<em>Dasarathan</em></h1>
+        <p class="ht rv">Investment Reporting &amp; Financial Reporting Professional</p>
+        <p class="hm rv">Chennai, India &nbsp;·&nbsp; <span>4+ Years</span> &nbsp;·&nbsp; US GAAP &nbsp;·&nbsp; IFRS &nbsp;·&nbsp; AI Automation</p>
+        <div class="hbtns rv">
+          <a href="#s3" class="bf">Explore Journey</a>
+          <a href="#s6" class="bo">Get in Touch</a>
+        </div>
+        <div class="hpl rv">
+          <span class="pll">Experienced with platforms</span>
+          <div class="plc">
+            <span class="pc">eVestment</span><span class="pc">Wilshire</span>
+            <span class="pc">Broadridge</span><span class="pc">Confluence</span>
+            <span class="pc">Callan</span><span class="pc">Informa</span>
           </div>
-          <ul class="tl-list">
-            <li>Prepared and reviewed financial statements, notes, and disclosures for Mutual Funds ensuring full compliance with US GAAP; reviewed fund fact sheets for completeness and regulatory requirements.</li>
-            <li>Coordinated regularly with onshore team to align on fund delivery timelines and resolve queries.</li>
-            <li>Built a <strong>Custom GPT in ChatGPT</strong> to automate fund fact review processes; integrated AI into existing workflows to improve accuracy and efficiency. Executed SQL queries using MS Access for data validation and reporting.</li>
-            <li>Worked on Nasdaq eVestment for fund fact data accuracy; managed and maintained data via Wilshire, Callan, Informa, Broadridge, and Confluence (IMGD).</li>
-            <li><em>Achievement:</em> Received appreciation from senior leadership and Director for developing Custom GPT and driving AI integration in the process.</li>
-          </ul>
         </div>
       </div>
+      <div class="hcard rv">
+        <div class="hct">At a Glance</div>
+        <div class="hcs">
+          <div class="hcst"><span class="hcn" data-c="4">0</span><span class="hcl">Years Exp.</span></div>
+          <div class="hcst"><span class="hcn" data-c="3">0</span><span class="hcl">Employers</span></div>
+          <div class="hcst"><span class="hcn" data-c="2">0</span><span class="hcl">Standards</span></div>
+          <div class="hcst"><span class="hcn" style="font-size:1.5rem">AI</span><span class="hcl">Builder</span></div>
+        </div>
+        <div class="hcsk">
+          <div class="hcsk-row"><div class="hcsk-dot" style="background:#0f7c7c"></div><span class="hcsk-n">US GAAP &amp; IFRS Reporting</span></div>
+          <div class="hcsk-row"><div class="hcsk-dot" style="background:#1a5c38"></div><span class="hcsk-n">Private Equity &amp; Hedge Funds</span></div>
+          <div class="hcsk-row"><div class="hcsk-dot" style="background:#1d8bb0"></div><span class="hcsk-n">Custom GPT &amp; AI Automation</span></div>
+          <div class="hcsk-row"><div class="hcsk-dot" style="background:#b8860b"></div><span class="hcsk-n">SQL, Power BI, Excel</span></div>
+          <div class="hcsk-row"><div class="hcsk-dot" style="background:#6b3fa0"></div><span class="hcsk-n">Investment Platforms</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sh"><div class="sb"></div>Scroll to explore</div>
+  <div class="slbl">Scene 00 · Forest Dawn</div>
+</section>
 
-      <div class="tl-item reveal">
-        <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <div><span class="tl-date">October 2022 – April 2025</span><h3>Associate 2</h3><p class="tl-org">State Street · Chennai, Tamil Nadu</p></div>
+<!-- S1: PROFILE — Waterfall -->
+<section class="scene" id="s1">
+  <canvas class="sc" id="c1"></canvas>
+  <div class="scn">
+    <div class="cw">
+      <div class="eye rv">01 — Profile</div>
+      <h2 class="stitle rv">About Me</h2>
+      <div class="pg">
+        <div class="pb rv">
+          <p>Investment Reporting and Financial Reporting professional with experience in <strong>Private Equity, Hedge Funds,</strong> and <strong>Separate Accounts.</strong> Strong focus on AI and automation, including building <strong>Custom GPT tools</strong> to automate fund fact reviews and improve accuracy and turnaround time.</p>
+          <p>Experienced in <strong>US GAAP and IFRS</strong> financial statements, KPI reporting, and close coordination with onshore teams. Technically skilled in <em>Excel, MS Access, SQL, Power BI</em>, and investment platforms such as eVestment, Wilshire, Callan, and Broadridge.</p>
+          <p>Recognised by <strong>senior leadership and the Director</strong> at Empower for Custom GPT development and AI integration, and by the <strong>Managing Director</strong> at State Street for quality and process improvements.</p>
+        </div>
+        <div class="sg">
+          <div class="st rv"><span class="sn" data-c="4">0</span><span class="su">+</span><span class="sl">Years Experience</span></div>
+          <div class="st rv"><span class="sn" data-c="3">0</span><span class="su"></span><span class="sl">Major Employers</span></div>
+          <div class="st rv"><span class="sn" data-c="2">0</span><span class="su"></span><span class="sl">Accounting Standards</span></div>
+          <div class="st rv"><span class="sn" style="font-size:1.5rem">AI</span><span class="su"></span><span class="sl">Automation Builder</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slbl">Scene 01 · Waterfall Mist</div>
+</section>
+
+<!-- S2: SKILLS — Ocean Coral Reef -->
+<section class="scene" id="s2">
+  <canvas class="sc" id="c2"></canvas>
+  <div class="scn">
+    <div class="cw">
+      <div class="eye rv">02 — Skills</div>
+      <h2 class="stitle rv">Core Competencies</h2>
+      <div class="skgr">
+        <div class="skc rv" style="--bc:linear-gradient(90deg,#0f7c7c,#1d8bb0)">
+          <div class="ski">📊</div><h3>Financial &amp; Investment Reporting</h3>
+          <div class="sktg"><span class="tag tc">Financial Reporting</span><span class="tag tc">Private Equity</span><span class="tag tc">Hedge Funds</span><span class="tag tc">Mutual Funds</span><span class="tag tc">CLO</span><span class="tag tc">REITs</span><span class="tag tc">Fund of Funds</span></div>
+        </div>
+        <div class="skc rv" style="--bc:linear-gradient(90deg,#0a5a8c,#4db8d4)">
+          <div class="ski">📋</div><h3>Accounting Standards</h3>
+          <div class="sktg"><span class="tag bc">US GAAP</span><span class="tag bc">IFRS</span><span class="tag bc">KPI Preparation</span><span class="tag bc">Balance Sheets</span><span class="tag bc">Income Statements</span><span class="tag bc">Cash Flow</span></div>
+        </div>
+        <div class="skc rv" style="--bc:linear-gradient(90deg,#1a5c38,#4aab78)">
+          <div class="ski">🤖</div><h3>AI &amp; Automation</h3>
+          <div class="sktg"><span class="tag gc">Custom GPT Development</span><span class="tag gc">Process Automation</span><span class="tag gc">AI Integration in Finance</span><span class="tag gc">ChatGPT</span><span class="tag gc">Workflow Optimization</span></div>
+        </div>
+        <div class="skc rv" style="--bc:linear-gradient(90deg,#4a6072,#8fa3b8)">
+          <div class="ski">🛠️</div><h3>Data &amp; Reporting Tools</h3>
+          <div class="sktg"><span class="tag">MS Excel</span><span class="tag">SQL</span><span class="tag">MS Access</span><span class="tag">Power BI</span><span class="tag">SAP</span><span class="tag">Tally ERP</span><span class="tag">TCS ION</span></div>
+        </div>
+        <div class="skc rv" style="--bc:linear-gradient(90deg,#0f7c7c,#2d7a4f)">
+          <div class="ski">📈</div><h3>Investment Platforms</h3>
+          <div class="sktg"><span class="tag tc">Nasdaq eVestment</span><span class="tag tc">Wilshire</span><span class="tag tc">Callan</span><span class="tag tc">Informa</span><span class="tag tc">Broadridge</span><span class="tag tc">Confluence (IMGD)</span></div>
+        </div>
+        <div class="skc rv" style="--bc:linear-gradient(90deg,#b8860b,#d4a017)">
+          <div class="ski">🤝</div><h3>Professional Skills</h3>
+          <div class="sktg"><span class="tag gd">Onshore–Offshore Coordination</span><span class="tag gd">Stakeholder Communication</span><span class="tag gd">SOP Documentation</span><span class="tag gd">Process Improvement</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slbl">Scene 02 · Ocean Coral Reef</div>
+</section>
+
+<!-- S3: EXPERIENCE — Mountain Vista -->
+<section class="scene" id="s3">
+  <canvas class="sc" id="c3"></canvas>
+  <div class="scn">
+    <div class="cw">
+      <div class="eye rv">03 — Experience</div>
+      <h2 class="stitle rv">Professional Journey</h2>
+      <div class="tl">
+
+        <div class="tli rv">
+          <div class="tll"><div class="tld now"></div><div class="tlln"></div></div>
+          <div class="tlb">
+            <div class="tlc">
+              <div class="tlh">
+                <div><span class="tldt now">May 2025 – Present</span><div class="tlr">Investment Reporting Analyst</div><div class="tlo">Empower · Bengaluru, Karnataka</div></div>
+                <span class="tlbg">Current</span>
+              </div>
+              <ul class="tlps">
+                <li class="tlp">Prepared and reviewed financial statements, notes, and disclosures for <strong>Mutual Funds</strong> ensuring full compliance with US GAAP; reviewed fund fact sheets for completeness and regulatory requirements.</li>
+                <li class="tlp">Coordinated regularly with onshore team to align on fund delivery timelines and resolve queries.</li>
+                <li class="tlp">Built a <strong>Custom GPT in ChatGPT</strong> to automate fund fact review processes; integrated AI into existing workflows to improve accuracy and efficiency. Executed SQL queries using MS Access for data validation and reporting.</li>
+                <li class="tlp">Worked on Nasdaq eVestment for fund fact data accuracy; managed data via Wilshire, Callan, Informa, Broadridge, and Confluence (IMGD).</li>
+                <li class="tlp"><em>Achievement:</em> Received appreciation from senior leadership and Director for developing Custom GPT and driving AI integration in the process.</li>
+              </ul>
+            </div>
           </div>
-          <ul class="tl-list">
-            <li>Prepared and reviewed fund-level financial statements under <strong>US GAAP and IFRS</strong> for Private Equity, CLO, Fund of Funds, REITs, and Hedge Funds.</li>
-            <li>Produced consolidated balance sheets, income statements, partners' capital statements, schedules of investments, footnotes, and cash flow statements across Master Feeder, Standalone, and Co-Investment structures.</li>
-            <li>Interacted regularly with onshore team on fund delivery timelines; prepared and reviewed Standard Operating Procedures for Financial Reporting.</li>
-            <li>Collaborated with cross-functional teams to resolve accounting and reporting issues; implemented process improvements to increase efficiency and reduce errors.</li>
-            <li><em>Achievement:</em> Received appreciation from Managing Director for quality and process improvements in the financial reporting process.</li>
-          </ul>
         </div>
-      </div>
 
-      <div class="tl-item reveal">
-        <div class="tl-marker"><div class="tl-dot"></div></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <div><span class="tl-date">August 2021 – February 2022</span><h3>Intern</h3><p class="tl-org">Rajesh &amp; Ganesh Chartered Accountant · Chennai, Tamil Nadu</p></div>
+        <div class="tli rv">
+          <div class="tll"><div class="tld"></div><div class="tlln"></div></div>
+          <div class="tlb">
+            <div class="tlc">
+              <div class="tlh">
+                <div><span class="tldt">October 2022 – April 2025</span><div class="tlr">Associate 2</div><div class="tlo">State Street · Chennai, Tamil Nadu</div></div>
+              </div>
+              <ul class="tlps">
+                <li class="tlp">Prepared and reviewed fund-level financial statements under <strong>US GAAP and IFRS</strong> for Private Equity, CLO, Fund of Funds, REITs, and Hedge Funds.</li>
+                <li class="tlp">Produced balance sheets, income statements, partners' capital statements, schedules of investments, footnotes, and cash flow statements.</li>
+                <li class="tlp">Handled complex fund structures including <strong>Master Feeder, Standalone, and Co-Investment</strong> structures.</li>
+                <li class="tlp"><em>Achievement:</em> Recognised by Managing Director for quality improvements and process enhancements in financial reporting.</li>
+              </ul>
+            </div>
           </div>
-          <ul class="tl-list">
-            <li>Provided accounting and audit services for clients at a chartered accountancy firm.</li>
-            <li>Worked on forensic audit, cost audit, product costing, vouching, and MIS reporting.</li>
-            <li>Computed product cost for various MSMEs and provided variance analysis to management.</li>
-          </ul>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
+        <div class="tli rv">
+          <div class="tll"><div class="tld"></div></div>
+          <div class="tlb">
+            <div class="tlc">
+              <div class="tlh">
+                <div><span class="tldt">August 2021 – February 2022</span><div class="tlr">Intern</div><div class="tlo">Rajesh &amp; Ganesh Chartered Accountant · Chennai, Tamil Nadu</div></div>
+              </div>
+              <ul class="tlps">
+                <li class="tlp">Provided accounting and audit services for clients at a chartered accountancy firm.</li>
+                <li class="tlp">Worked on forensic audit, cost audit, product costing, vouching, and MIS reporting.</li>
+                <li class="tlp">Computed product cost for various MSMEs and provided variance analysis to management.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-<!-- SCENE 5: CERTIFICATIONS — Beach -->
-<section id="certifications" class="scene" data-scene="4">
-  <div class="liquid-bg" id="liqBg4"></div>
-  <div class="scene-overlay"></div>
-  <div class="container">
-    <div class="section-eyebrow reveal">04 — Certifications</div>
-    <h2 class="section-title reveal">LinkedIn Learning &amp; Credentials</h2>
-    <div class="cert-grid">
-      <div class="cert-card reveal">
-        <div class="cert-logo ai-logo">AI</div>
-        <div class="cert-body">
-          <h3>AI Fluency for Students</h3>
-          <p class="cert-issuer">Anthropic</p>
-          <p class="cert-meta">Issued Mar 2026 · Credential ID: f95vi7jgs7p4</p>
-          <div class="cert-tags"><span>Artificial Intelligence (AI)</span><span>AI for Career Development</span></div>
-        </div>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-logo li-logo">in</div>
-        <div class="cert-body">
-          <h3>Derivatives Fundamentals</h3>
-          <p class="cert-issuer">LinkedIn Learning</p>
-          <p class="cert-meta">Issued Jun 2025</p>
-          <div class="cert-tags"><span>Accounting</span><span>Finance</span></div>
-        </div>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-logo li-logo">in</div>
-        <div class="cert-body">
-          <h3>Excel and ChatGPT: Data Analysis Power Tips</h3>
-          <p class="cert-issuer">LinkedIn Learning</p>
-          <p class="cert-meta">Issued Aug 2025</p>
-          <div class="cert-tags"><span>AI for Business</span><span>AI for Business Analysis</span></div>
-        </div>
       </div>
     </div>
   </div>
+  <div class="slbl">Scene 03 · Mountain Vista</div>
 </section>
 
-<!-- SCENE 6: EDUCATION — Cityscape -->
-<section id="education" class="scene" data-scene="5">
-  <div class="liquid-bg" id="liqBg5"></div>
-  <div class="scene-overlay"></div>
-  <div class="container">
-    <div class="section-eyebrow reveal">05 — Education</div>
-    <h2 class="section-title reveal">Academic Background</h2>
-    <div class="edu-grid">
-      <div class="edu-card reveal">
-        <div class="edu-icon">🎓</div>
-        <div>
-          <h3>CMA Intermediate</h3>
-          <p class="edu-inst">The Institute of Cost Accountants of India</p>
-          <div class="edu-meta"><span class="edu-year">2020</span><span class="edu-score">Score: 64%</span></div>
+<!-- S4: CERTIFICATIONS — Beach Sunset -->
+<section class="scene" id="s4">
+  <canvas class="sc" id="c4"></canvas>
+  <div class="scn">
+    <div class="cw">
+      <div class="eye rv">04 — Certifications</div>
+      <h2 class="stitle rv">Credentials &amp; Learning</h2>
+      <div class="cgr">
+        <div class="cc rv">
+          <div class="cbdg an">AI</div>
+          <div class="cbb">
+            <h3>AI Fluency for Students</h3>
+            <div class="cis">Anthropic</div>
+            <div class="cdt">Issued Mar 2026 · ID: f95vi7jgs7p4</div>
+            <div class="ctg"><span class="tag gc">Artificial Intelligence</span><span class="tag gc">AI for Career Development</span></div>
+          </div>
+        </div>
+        <div class="cc rv">
+          <div class="cbdg li">in</div>
+          <div class="cbb">
+            <h3>Derivatives Fundamentals</h3>
+            <div class="cis">LinkedIn Learning</div>
+            <div class="cdt">Issued Jun 2025</div>
+            <div class="ctg"><span class="tag bc">Accounting</span><span class="tag bc">Finance</span></div>
+          </div>
+        </div>
+        <div class="cc rv">
+          <div class="cbdg li">in</div>
+          <div class="cbb">
+            <h3>Excel and ChatGPT: Data Analysis Power Tips</h3>
+            <div class="cis">LinkedIn Learning</div>
+            <div class="cdt">Issued Aug 2025</div>
+            <div class="ctg"><span class="tag tc">AI for Business</span><span class="tag tc">AI for Business Analysis</span></div>
+          </div>
         </div>
       </div>
-      <div class="edu-card reveal">
-        <div class="edu-icon">🏛️</div>
-        <div>
-          <h3>B.Com</h3>
-          <p class="edu-inst">DG Vaishnav College</p>
-          <div class="edu-meta"><span class="edu-year">2021</span><span class="edu-score">Score: 86%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="section-eyebrow reveal" style="margin-top:3.5rem">Languages &amp; Additional</div>
-    <div class="lang-row reveal">
-      <div class="lang-pill"><span class="lname">English</span><span class="ltag fluent">Fluent · Advanced</span></div>
-      <div class="lang-pill"><span class="lname">Tamil</span><span class="ltag native">Native</span></div>
-      <div class="lang-pill"><span class="lname">Telugu</span><span class="ltag beginner">Beginner</span></div>
-      <div class="lang-pill"><span class="lname">Typewriting</span><span class="ltag intermediate">Intermediate</span></div>
     </div>
   </div>
+  <div class="slbl">Scene 04 · Beach Sunset</div>
 </section>
 
-<!-- SCENE 7: CONTACT — Sunrise -->
-<section id="contact" class="scene" data-scene="6">
-  <div class="liquid-bg" id="liqBg6"></div>
-  <div class="scene-overlay"></div>
-  <div class="container">
-    <div class="section-eyebrow reveal">06 — Contact</div>
-    <h2 class="section-title reveal">Let's Connect</h2>
-    <p class="contact-sub reveal">Open to Investment Reporting, Financial Reporting &amp; AI Automation roles.</p>
-    <div class="contact-layout">
-      <div class="contact-cards reveal">
-        <a href="/cdn-cgi/l/email-protection#6e090f040f1e0f1a06175f585b2e09030f0702400d0103" class="c-card">
-          <span class="c-icon">✉️</span>
-          <div><span class="c-label">Email</span><span class="c-val"><span class="__cf_email__" data-cfemail="52353338332233263a2b63646712353f333b3e7c313d3f">[email&#160;protected]</span></span></div>
-        </a>
-        <div class="c-card">
-          <span class="c-icon">📍</span>
-          <div><span class="c-label">Location</span><span class="c-val">Chennai, Tamil Nadu, India</span></div>
+<!-- S5: EDUCATION — Cityscape -->
+<section class="scene" id="s5">
+  <canvas class="sc" id="c5"></canvas>
+  <div class="scn">
+    <div class="cw">
+      <div class="eye rv">05 — Education</div>
+      <h2 class="stitle rv">Academic Background</h2>
+      <div class="egr">
+        <div class="edc rv">
+          <div class="edi">🎓</div>
+          <div><h3>CMA Intermediate</h3><div class="edin">The Institute of Cost Accountants of India</div><div class="edm"><span class="edy">2020</span><span class="edsc">Score: 64%</span></div></div>
         </div>
-        <a href="https://linkedin.com/in/trulygaja" target="_blank" rel="noopener" class="c-card">
-          <span class="c-icon">🔗</span>
-          <div><span class="c-label">LinkedIn</span><span class="c-val">linkedin.com/in/trulygaja</span></div>
-        </a>
+        <div class="edc rv">
+          <div class="edi">🏛️</div>
+          <div><h3>B.Com</h3><div class="edin">DG Vaishnav College, University of Madras</div><div class="edm"><span class="edy">2021</span><span class="edsc">Score: 86%</span></div></div>
+        </div>
       </div>
+      <div class="lsec rv">Languages &amp; Additional Skills</div>
+      <div class="lr rv">
+        <div class="lp"><span class="ln">English</span><span class="ll fl">Fluent · Advanced</span></div>
+        <div class="lp"><span class="ln">Tamil</span><span class="ll na">Native</span></div>
+        <div class="lp"><span class="ln">Telugu</span><span class="ll bg">Beginner</span></div>
+        <div class="lp"><span class="ln">Typewriting</span><span class="ll im">Intermediate</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="slbl">Scene 05 · City at Dawn</div>
+</section>
 
-      <!-- AI Chatbot -->
-      <div class="chatbot reveal">
-        <div class="cb-header">
-          <div class="cb-avatar">GD</div>
-          <div><p class="cb-name">Portfolio Assistant</p><p class="cb-sub">Ask anything about Gajapathy</p></div>
-          <div class="cb-online"><span></span>Online</div>
+<!-- S6: CONTACT — Sunrise -->
+<section class="scene" id="s6">
+  <canvas class="sc" id="c6"></canvas>
+  <div class="scn">
+    <div class="cw">
+      <div class="eye rv">06 — Contact</div>
+      <h2 class="stitle rv">Let's Connect</h2>
+      <p class="rv" style="color:var(--stone);margin-bottom:2.5rem;font-size:.97rem">Open to Investment Reporting, Financial Reporting &amp; AI Automation roles.</p>
+      <div class="cog">
+        <div class="coc rv">
+          <a href="mailto:gajapathy165@gmail.com" class="cocd">
+            <span class="coci">✉️</span><div><span class="cocl">Email</span><span class="cocv">gajapathy165@gmail.com</span></div>
+          </a>
+          <div class="cocd">
+            <span class="coci">📍</span><div><span class="cocl">Location</span><span class="cocv">Chennai, Tamil Nadu, India</span></div>
+          </div>
+          <a href="https://linkedin.com/in/trulygaja" target="_blank" rel="noopener" class="cocd">
+            <span class="coci">🔗</span><div><span class="cocl">LinkedIn</span><span class="cocv">linkedin.com/in/trulygaja</span></div>
+          </a>
         </div>
-        <div class="cb-messages" id="chatMessages">
-          <div class="msg bot"><p>Hi! I'm Gajapathy's portfolio assistant. Ask me about his experience, skills, certifications, or education. 👋</p></div>
+        <div class="chat rv">
+          <div class="chh">
+            <div class="chav">GD</div>
+            <div><div class="chn">Portfolio Assistant</div><div class="chs">Ask anything about Gajapathy</div></div>
+            <div class="chst"><span></span>Online</div>
+          </div>
+          <div class="chm" id="chm">
+            <div class="msg bot"><p>Hi! I'm Gajapathy's portfolio assistant. Ask me about his experience, skills, certifications, or education. 👋</p></div>
+          </div>
+          <div class="chq" id="chq">
+            <button onclick="askQ(this)">Key skills?</button>
+            <button onclick="askQ(this)">AI work?</button>
+            <button onclick="askQ(this)">Certifications?</button>
+            <button onclick="askQ(this)">Current role?</button>
+          </div>
+          <div class="chi">
+            <input type="text" id="cin" placeholder="Ask anything…" autocomplete="off">
+            <button onclick="doChat()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="cb-suggestions" id="chatSugg">
-          <button onclick="askSugg(this)">Key skills?</button>
-          <button onclick="askSugg(this)">AI work?</button>
-          <button onclick="askSugg(this)">Certifications?</button>
-          <button onclick="askSugg(this)">Current role?</button>
-        </div>
-        <div class="cb-input">
-          <input type="text" id="chatInput" placeholder="Ask anything…" autocomplete="off">
-          <button id="chatSend" onclick="sendChat()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="slbl">Scene 06 · Sunrise Horizon</div>
+</section>
+
+<footer>
+  <p>&#169; 2026 Gajapathy Dasarathan &nbsp;·&nbsp; Investment Reporting Professional &nbsp;·&nbsp;
+  <a href="mailto:gajapathy165@gmail.com">gajapathy165@gmail.com</a> &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/trulygaja" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+'use strict';
+const P2=Math.PI*2,lerp=(a,b,t)=>a+(b-a)*t,rand=(a,b)=>Math.random()*(b-a)+a,clamp=(v,l,h)=>Math.max(l,Math.min(h,v));
+
+/* ── CURSOR + RIPPLE ── */
+const CR=document.getElementById('cr'),CD=document.getElementById('cd');
+const RC=document.getElementById('rc'),RX=RC.getContext('2d');
+let mx=0,my=0,ox=0,oy=0;
+const rips=[];
+function resRC(){RC.width=innerWidth;RC.height=innerHeight;}
+resRC(); window.addEventListener('resize',resRC);
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;CD.style.left=mx+'px';CD.style.top=my+'px';});
+document.addEventListener('click',e=>spR(e.clientX,e.clientY,1));
+document.addEventListener('touchstart',e=>{const t=e.touches[0];spR(t.clientX,t.clientY,1);},{passive:true});
+document.addEventListener('touchmove',e=>{if(Math.random()<.3){const t=e.touches[0];spR(t.clientX,t.clientY,.35);}},{passive:true});
+function spR(x,y,s){
+  rips.push({x,y,r:2,mx:60+rand(0,40),a:.5*s,sp:2+rand(0,1.8)});
+  for(let i=0;i<2;i++) rips.push({x:x+rand(-6,6),y:y+rand(-6,6),r:1,mx:30+rand(0,20),a:.22*s,sp:1.4+rand(0,1.2)});
+}
+document.querySelectorAll('a,button,[class*="card"],[class*="tile"],[class*="chip"],[class*="pill"],[class*="cocd"]').forEach(el=>{
+  el.addEventListener('mouseenter',()=>CR.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>CR.classList.remove('hov'));
+});
+function tickC(){
+  ox=lerp(ox,mx,.11);oy=lerp(oy,my,.11);
+  const dx=mx-ox,dy=my-oy,sp=Math.sqrt(dx*dx+dy*dy);
+  const sx=1+clamp(sp*.011,0,.32),sy=1-clamp(sp*.005,0,.16);
+  const ag=Math.atan2(dy,dx)*180/Math.PI;
+  CR.style.left=ox+'px';CR.style.top=oy+'px';
+  CR.style.transform=`translate(-50%,-50%) rotate(${ag}deg) scaleX(${sx}) scaleY(${sy})`;
+  RX.clearRect(0,0,RC.width,RC.height);
+  for(let i=rips.length-1;i>=0;i--){
+    const rp=rips[i]; rp.r+=rp.sp; rp.a-=.012;
+    if(rp.a<=0||rp.r>=rp.mx){rips.splice(i,1);continue;}
+    for(let ring=0;ring<3;ring++){
+      const rr=rp.r-ring*8; if(rr<=0) continue;
+      const a=rp.a*(1-ring*.32)*(1-rp.r/rp.mx*.6);
+      RX.beginPath();RX.arc(rp.x,rp.y,rr,0,P2);
+      RX.strokeStyle=`rgba(15,124,124,${a.toFixed(3)})`;
+      RX.lineWidth=clamp(1.3-ring*.3,.25,1.3);RX.stroke();
+    }
+  }
+  requestAnimationFrame(tickC);
+}
+requestAnimationFrame(tickC);
+
+/* ── SCENE CANVASES ── */
+function mkScene(id,fn){
+  const c=document.getElementById(id); if(!c) return;
+  const ctx=c.getContext('2d'),sec=c.parentElement;
+  let W,H,vis=false,t0=null;
+  function rsz(){W=c.width=sec.offsetWidth||innerWidth;H=c.height=sec.offsetHeight||innerHeight;}
+  rsz(); new ResizeObserver(rsz).observe(sec);
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting;},{threshold:.01}).observe(sec);
+  function lp(ts){if(!t0)t0=ts;if(vis)fn(ctx,W,H,ts-t0);requestAnimationFrame(lp);}
+  requestAnimationFrame(lp);
+}
+
+/* Forest Dawn */
+mkScene('c0',(ctx,W,H,t)=>{
+  ctx.clearRect(0,0,W,H);
+  // Floating liquid orbs
+  [[W*.88,H*.12,200,'rgba(15,124,124,.045)'],[W*.08,H*.35,240,'rgba(26,92,56,.035)'],[W*.72,H*.78,180,'rgba(29,139,176,.04)'],[W*.22,H*.88,150,'rgba(15,124,124,.03)']].forEach(([x,y,r,c],i)=>{
+    const px=x+Math.sin(t*.0004+i*1.3)*28,py=y+Math.cos(t*.0003+i*.9)*18;
+    const g=ctx.createRadialGradient(px,py,0,px,py,r+Math.sin(t*.0005+i)*18);
+    g.addColorStop(0,c);g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(px,py,r+Math.sin(t*.0005+i)*18,0,P2);ctx.fill();
+  });
+  // Tree silhouettes right
+  for(let i=0;i<7;i++){
+    const tx=W*.66+i*W*.052,th=H*(0.2+0.11*Math.sin(i*2.3)),sw=Math.sin(t*.0004+i*1.4)*3;
+    ctx.save();ctx.translate(tx+sw,H);
+    const g=ctx.createLinearGradient(0,0,0,-th);
+    g.addColorStop(0,'rgba(26,92,56,.13)');g.addColorStop(1,'rgba(74,171,120,.03)');
+    ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(-(16+i*3),-th*.5);ctx.lineTo(-9,-th*.72);ctx.lineTo(0,-th);ctx.lineTo(9,-th*.72);ctx.lineTo(16+i*3,-th*.5);ctx.closePath();
+    ctx.fillStyle=g;ctx.fill();ctx.restore();
+  }
+  // Particles
+  ctx.globalCompositeOperation='multiply';
+  for(let i=0;i<18;i++){
+    const px=((t*.014*(0.3+i*.05)+i*W/18)%W+W)%W,py=H*.2+i*(H*.04)+Math.sin(t*.0005+i)*10;
+    const a=.04+.03*Math.sin(t*.001+i*2);
+    ctx.beginPath();ctx.arc(px,py,2,0,P2);ctx.fillStyle=`rgba(15,124,124,${a})`;ctx.fill();
+  }
+  ctx.globalCompositeOperation='source-over';
+});
+
+/* Waterfall Mist */
+mkScene('c1',(ctx,W,H,t)=>{
+  ctx.clearRect(0,0,W,H);
+  for(let s=0;s<5;s++){
+    const sx=W*.8+s*30,off=((t*.0007+s*.2)%1)*H,sw=6+s*4;
+    for(let seg=0;seg<4;seg++){
+      const sy=((off+seg*.25*H)%H)-H*.1,sh=H*.08;
+      const g=ctx.createLinearGradient(sx,sy,sx+sw,sy+sh);
+      g.addColorStop(0,'rgba(0,150,200,0)');g.addColorStop(.3,`rgba(29,139,176,${.07+s*.01})`);g.addColorStop(1,'rgba(0,150,200,0)');
+      ctx.fillStyle=g;ctx.fillRect(sx,sy,sw,sh);
+    }
+  }
+  const mg=ctx.createLinearGradient(0,H*.8,0,H);mg.addColorStop(0,'rgba(150,220,240,0)');mg.addColorStop(1,'rgba(150,220,240,.06)');ctx.fillStyle=mg;ctx.fillRect(0,H*.8,W,H*.2);
+  [[W*.18,H*.22,160,'rgba(15,124,124,.04)'],[W*.78,H*.62,200,'rgba(29,139,176,.035)']].forEach(([x,y,r,c],i)=>{
+    const px=x+Math.sin(t*.0003+i)*22,py=y+Math.cos(t*.0004+i)*16;
+    const g=ctx.createRadialGradient(px,py,0,px,py,r);g.addColorStop(0,c);g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(px,py,r,0,P2);ctx.fill();
+  });
+});
+
+/* Ocean Coral Reef */
+mkScene('c2',(ctx,W,H,t)=>{
+  ctx.clearRect(0,0,W,H);
+  for(let w=0;w<3;w++){
+    const yb=H*(.05+w*.025),amp=8+w*4;
+    ctx.beginPath();ctx.moveTo(0,H);
+    for(let x=0;x<=W;x+=5) ctx.lineTo(x,yb+Math.sin(x*.015+t*.0004+w)*amp);
+    ctx.lineTo(W,H);ctx.closePath();ctx.fillStyle=`rgba(15,124,124,${.04+w*.014})`;ctx.fill();
+  }
+  const cols=['rgba(232,93,74,.2)','rgba(29,139,176,.17)','rgba(15,124,124,.2)','rgba(184,134,11,.17)'];
+  for(let c=0;c<12;c++){
+    const cx=c*W/12,ch=H*(.04+.035*Math.sin(c*2.1)),sw=Math.sin(t*.0005+c*1.5)*3;
+    ctx.save();ctx.translate(cx+sw,H);ctx.strokeStyle=cols[c%cols.length];ctx.lineWidth=1.5+c%3;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(0,0);for(let seg=0;seg<4;seg++) ctx.lineTo(Math.sin(seg*.9+c)*ch*.3,-ch*(seg+1)/4);
+    ctx.stroke();ctx.restore();
+  }
+  for(let i=0;i<14;i++){
+    const by=H-((t*.028*(0.5+i*.04)+i*H*.09)%(H*1.2)),bx=(Math.sin(t*.0002*i+i*3)*.5+.5)*W;
+    const a=.1+.06*Math.sin(t*.0008+i);
+    ctx.beginPath();ctx.arc(bx,by,1.5+i%3,0,P2);ctx.strokeStyle=`rgba(15,124,124,${a})`;ctx.lineWidth=.8;ctx.stroke();
+  }
+});
+
+/* Mountain Vista */
+mkScene('c3',(ctx,W,H,t)=>{
+  ctx.clearRect(0,0,W,H);
+  const sg=ctx.createRadialGradient(W*.5,H,0,W*.5,H,H*.65);
+  sg.addColorStop(0,`rgba(212,160,23,${.05+.02*Math.sin(t*.0003)})`);sg.addColorStop(1,'rgba(212,160,23,0)');
+  ctx.fillStyle=sg;ctx.fillRect(0,0,W,H);
+  [{p:4,h:.38,c:'rgba(107,63,160,.07)',x:.28},{p:5,h:.28,c:'rgba(155,89,182,.055)',x:.18},{p:6,h:.18,c:'rgba(184,134,11,.065)',x:.08}].forEach(rg=>{
+    ctx.beginPath();ctx.moveTo(W*rg.x,H);
+    const st=(W*(1-rg.x))/rg.p;
+    for(let i=0;i<=rg.p;i++){const px=W*rg.x+i*st,ph=H*rg.h*(.7+.3*Math.sin(i*2.6+rg.p));ctx.lineTo(px-st/2,H-ph);ctx.lineTo(px,H);}
+    ctx.closePath();ctx.fillStyle=rg.c;ctx.fill();
+  });
+  for(let i=0;i<16;i++){
+    const sx=(i*137)%W,sy=(i*73)%(H*.3),a=.1+.07*Math.sin(t*.001*(i%3+1)+i);
+    ctx.beginPath();ctx.arc(sx,sy,1,0,P2);ctx.fillStyle=`rgba(107,63,160,${a})`;ctx.fill();
+  }
+});
+
+/* Beach Sunset */
+mkScene('c4',(ctx,W,H,t)=>{
+  ctx.clearRect(0,0,W,H);
+  const sG=ctx.createRadialGradient(W*.82,H*.08,0,W*.82,H*.08,H*.45);
+  sG.addColorStop(0,`rgba(212,160,23,${.14+.04*Math.sin(t*.0003)})`);sG.addColorStop(.5,'rgba(232,93,74,.06)');sG.addColorStop(1,'rgba(232,93,74,0)');
+  ctx.fillStyle=sG;ctx.fillRect(0,0,W,H);
+  for(let w=0;w<4;w++){
+    const yb=H*(.76+w*.055),amp=6+w*3;
+    ctx.beginPath();ctx.moveTo(0,H);
+    for(let x=0;x<=W;x+=5) ctx.lineTo(x,yb+Math.sin(x*.018+t*.0004-w*.5)*amp);
+    ctx.lineTo(W,H);ctx.closePath();ctx.fillStyle=`rgba(29,139,176,${.05+w*.018})`;ctx.fill();
+  }
+  const snd=ctx.createLinearGradient(0,H*.88,0,H);snd.addColorStop(0,'rgba(196,146,74,0)');snd.addColorStop(1,'rgba(196,146,74,.09)');ctx.fillStyle=snd;ctx.fillRect(0,H*.88,W,H*.12);
+});
+
+/* City at Dawn */
+mkScene('c5',(ctx,W,H,t)=>{
+  ctx.clearRect(0,0,W,H);
+  const ag=ctx.createRadialGradient(W*.78,H,0,W*.78,H,H*.55);ag.addColorStop(0,'rgba(107,63,160,.065)');ag.addColorStop(1,'rgba(107,63,160,0)');ctx.fillStyle=ag;ctx.fillRect(0,0,W,H);
+  for(let b=0;b<14;b++){
+    const bx=W*.48+b*(W*.038),bw=W*.032,bh=H*(.1+.22*Math.sin(b*1.7+1));
+    ctx.fillStyle=`rgba(107,63,160,${.04+b%3*.015})`;ctx.fillRect(bx,H-bh,bw,bh);
+    const rows=Math.floor(bh/18);
+    for(let row=0;row<rows;row++){
+      if(Math.sin(t*.0003+b*5.3+row*7.1)<=0) continue;
+      ctx.fillStyle='rgba(212,160,23,.22)';
+      const wy=H-bh+(row+1)*(bh/(rows+1))-5;
+      ctx.fillRect(bx+bw*.18,wy,4,5);ctx.fillRect(bx+bw*.58,wy,4,5);
+    }
+  }
+});
+
+/* Sunrise Horizon */
+mkScene('c6',(ctx,W,H,t)=>{
+  ctx.clearRect(0,0,W,H);
+  const sr=ctx.createRadialGradient(W*.5,H*.92,0,W*.5,H*.92,H*.9);
+  sr.addColorStop(0,`rgba(15,124,124,${.07+.025*Math.sin(t*.0002)})`);sr.addColorStop(.4,'rgba(26,92,56,.04)');sr.addColorStop(1,'rgba(26,92,56,0)');
+  ctx.fillStyle=sr;ctx.fillRect(0,0,W,H);
+  for(let r=0;r<8;r++){
+    const ang=(r/8)*P2+t*.00005,len=H*.55,a=.02+.01*Math.sin(t*.0004+r*2);
+    ctx.beginPath();ctx.moveTo(W*.5,H*.92);ctx.lineTo(W*.5+Math.cos(ang)*len,H*.92+Math.sin(ang)*len);
+    ctx.strokeStyle=`rgba(15,124,124,${a})`;ctx.lineWidth=.7;ctx.stroke();
+  }
+  const bx=W*.5+Math.sin(t*.00018)*80,by=H*.2;
+  ctx.fillStyle='rgba(26,35,50,.14)';
+  for(let i=0;i<5;i++){const bbx=bx+(i-2)*22,bby=by+Math.abs(i-2)*8;ctx.beginPath();ctx.arc(bbx,bby,2.2,Math.PI,P2);ctx.arc(bbx+6,bby+2,2.2,Math.PI,P2);ctx.fill();}
+});
+
+/* ── NAV ── */
+const navEl=document.getElementById('nav'),bgEl=document.getElementById('bg'),mobEl=document.getElementById('mob');
+window.addEventListener('scroll',()=>{
+  navEl.classList.toggle('solid',scrollY>50);
+  const secs=document.querySelectorAll('section[id]');
+  let cur='';
+  secs.forEach(s=>{if(scrollY>=s.offsetTop-130) cur=s.id;});
+  document.querySelectorAll('.na').forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+cur));
+});
+bgEl.addEventListener('click',()=>{bgEl.classList.toggle('open');mobEl.classList.toggle('open');});
+document.querySelectorAll('.ma').forEach(a=>a.addEventListener('click',()=>{bgEl.classList.remove('open');mobEl.classList.remove('open');}));
+
+/* ── REVEAL ── */
+const ro=new IntersectionObserver((es)=>{
+  es.forEach((e,i)=>{
+    if(e.isIntersecting){e.target.style.transitionDelay=Math.min(i%6,4)*.08+'s';e.target.classList.add('in');ro.unobserve(e.target);}
+  });
+},{threshold:.12,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+/* ── COUNTERS ── */
+function ac(el,n){
+  let s=null;
+  function st(ts){if(!s)s=ts;const p=Math.min((ts-s)/1100,1);el.textContent=Math.floor((1-Math.pow(1-p,3))*n);if(p<1)requestAnimationFrame(st);else el.textContent=n;}
+  requestAnimationFrame(st);
+}
+const co=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    e.target.querySelectorAll('[data-c]').forEach(el=>ac(el,parseInt(el.dataset.c)));
+    co.unobserve(e.target);
+  });
+},{threshold:.5});
+document.querySelectorAll('.hcs,.sg').forEach(el=>co.observe(el));
+
+/* ── CHATBOT ── */
+const KB={
+  hi:['hi','hello','hey','howdy'],role:['role','job','current','position','empower','doing'],
+  exp:['experience','years','career','state street','intern','work history'],
+  skills:['skill','know','expert','tool','tech','competenc'],
+  ai:['ai','gpt','chatgpt','automat','artificial'],
+  gaap:['gaap','ifrs','accounting','standard'],
+  plat:['platform','evestment','wilshire','callan','broadridge','confluence','informa','nasdaq'],
+  cert:['cert','certif','course','linkedin','anthropic','derivatives','credential'],
+  edu:['educat','study','college','degree','bcom','cma','vaishnav','icai'],
+  lang:['language','speak','english','tamil','telugu','typewriting'],
+  contact:['contact','email','reach','location','linkedin'],
+  achieve:['achiev','award','recogni','appreciat','director','managing'],
+  name:['name','who are you','gajapathy'],
+};
+const RS={
+  hi:"Hi! 👋 I'm Gajapathy's portfolio assistant. Ask me about his experience, skills, certifications, or how to reach him!",
+  name:"I represent **Gajapathy Dasarathan** — an Investment Reporting & Financial Reporting professional with 4+ years of experience, based in Chennai, India.",
+  role:"Currently **Investment Reporting Analyst at Empower** (Bengaluru, since May 2025). He prepares Mutual Fund financial statements under US GAAP, automates reviews via Custom GPT, and manages data across eVestment, Broadridge, and Confluence.",
+  exp:"4+ years across:\n\n• **Empower** — Investment Reporting Analyst (May 2025–Present)\n• **State Street** — Associate 2 (Oct 2022–Apr 2025)\n• **Rajesh & Ganesh CA** — Intern (Aug 2021–Feb 2022)",
+  skills:"Core competencies:\n\n• **Reporting:** PE, Hedge Funds, Mutual Funds, CLO, REITs\n• **Standards:** US GAAP & IFRS\n• **AI:** Custom GPT, Process Automation, ChatGPT\n• **Tools:** Excel, SQL, MS Access, Power BI, SAP\n• **Platforms:** eVestment, Wilshire, Callan, Broadridge, Confluence",
+  ai:"Built a **Custom GPT in ChatGPT** at Empower to automate fund fact review — improving accuracy and earning appreciation from the Director. Also certified in 'Excel and ChatGPT: Data Analysis Power Tips'.",
+  gaap:"Hands-on with **US GAAP** (Mutual Funds at Empower) and **IFRS** (PE, CLO, REITs, Hedge Funds at State Street). Full financial statements: balance sheets, P&L, cash flow, footnotes.",
+  plat:"Platform expertise: **Nasdaq eVestment**, Wilshire, Callan, Informa, Broadridge, and Confluence (IMGD).",
+  cert:"Three credentials:\n\n• **AI Fluency for Students** — Anthropic (Mar 2026)\n• **Derivatives Fundamentals** — LinkedIn Learning (Jun 2025)\n• **Excel and ChatGPT: Data Analysis Power Tips** — LinkedIn Learning (Aug 2025)",
+  edu:"• **CMA Intermediate** — ICAI (2020, 64%)\n• **B.Com** — DG Vaishnav College (2021, 86%)",
+  lang:"**English** (Fluent/Advanced), **Tamil** (Native), **Telugu** (Beginner), **Typewriting** (Intermediate).",
+  contact:"✉️ gajapathy165@gmail.com\n📍 Chennai, Tamil Nadu, India\n🔗 linkedin.com/in/trulygaja",
+  achieve:"• **Director & Senior Leadership at Empower** — Custom GPT & AI integration\n• **Managing Director at State Street** — quality & process improvements",
+  fallback:"Great question! Reach Gajapathy at **gajapathy165@gmail.com** or on LinkedIn. Happy to help with anything else!"
+};
+function classify(t){const l=t.toLowerCase();for(const[k,ps]of Object.entries(KB))if(ps.some(p=>l.includes(p)))return k;return'fallback';}
+function fmt(t){return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');}
+const CHM=document.getElementById('chm'),CIN=document.getElementById('cin');
+function addMsg(t,type){const d=document.createElement('div');d.className='msg '+type;const p=document.createElement('p');p.innerHTML=fmt(t);d.appendChild(p);CHM.appendChild(d);CHM.scrollTop=CHM.scrollHeight;}
+function doChat(){
+  const v=(CIN?CIN.value:'').trim();if(!v)return;
+  addMsg(v,'usr');CIN.value='';
+  const q=document.getElementById('chq');if(q)q.style.display='none';
+  const tp=document.createElement('div');tp.className='msg typ';tp.id='tp';tp.innerHTML='<p>Thinking…</p>';CHM.appendChild(tp);CHM.scrollTop=CHM.scrollHeight;
+  setTimeout(()=>{const el=document.getElementById('tp');if(el)el.remove();addMsg(RS[classify(v)]||RS.fallback,'bot');},500+Math.random()*400);
+}
+function askQ(btn){if(CIN)CIN.value=btn.textContent;doChat();}
+if(CIN) CIN.addEventListener('keydown',e=>{if(e.key==='Enter')doChat();});
+</script>
+</body>
+</html>
