@@ -1,0 +1,44 @@
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+header{
+background:#0a192f;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+nav{
+background:#172a45;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:40px;
+}
+
+#blogPosts div{
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+footer{
+background:#0a192f;
+color:white;
+text-align:center;
+padding:20px;
+}
