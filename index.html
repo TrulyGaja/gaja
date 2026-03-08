@@ -42,7 +42,19 @@
 
 <!-- Hero -->
 <header class="hero" id="hero">
+
+  <!-- Stripe-style flowing wave canvas — right side -->
+  <div class="wave-wrapper">
+    <canvas id="waveCanvas"></canvas>
+  </div>
+
   <div class="hero-inner">
+    <!-- Stripe-style ticker: "X% of professionals trust finance automation" -->
+    <div class="hero-ticker reveal">
+      <span class="ticker-label">Finance professionals using AI tools:</span>
+      <span class="ticker-value" id="tickerValue">0%</span>
+    </div>
+
     <div class="hero-badge reveal">
       <span class="badge-dot"></span>
       Available for opportunities
@@ -57,7 +69,20 @@
       <a href="#experience" class="btn btn-primary">View Experience</a>
       <a href="#contact" class="btn btn-outline">Get in Touch</a>
     </div>
+
+    <!-- Stripe-style trusted-by logos row -->
+    <div class="trusted-row reveal">
+      <span class="trusted-label">Experienced with</span>
+      <div class="trusted-logos">
+        <span class="trusted-logo">eVestment</span>
+        <span class="trusted-logo">Wilshire</span>
+        <span class="trusted-logo">Broadridge</span>
+        <span class="trusted-logo">Confluence</span>
+        <span class="trusted-logo">Callan</span>
+      </div>
+    </div>
   </div>
+
   <div class="hero-scroll">
     <div class="scroll-line"></div>
     <span>Scroll</span>
