@@ -1,1 +1,1 @@
-# gaja.github.io
+# gaja
