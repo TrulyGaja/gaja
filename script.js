@@ -1,142 +1,132 @@
-const profile = {
+/* ============================================
+   GAJAPATHY DASARATHAN — PORTFOLIO SCRIPT
+   ============================================ */
 
-name: "Gajapathy Dasarathan",
+// ---- Navbar scroll effect ----
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
-title: "Investment Reporting & Financial Reporting Professional",
+// ---- Mobile hamburger menu ----
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
 
-summary: "Investment Reporting professional experienced in Private Equity, Hedge Funds and Separate Accounts. Strong interest in AI automation in finance including building Custom GPT tools for fund fact review and reporting efficiency.",
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
 
-contact: "Email: gajapathy165@gmail.com | Phone: +91 93454 65667 | Chennai, India",
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
 
-skills: [
-"Financial Reporting",
-"Private Equity",
-"Hedge Funds",
-"Mutual Funds",
-"US GAAP",
-"IFRS",
-"Power BI",
-"SQL",
-"MS Excel",
-"MS Access",
-"AI Automation",
-"Process Improvement",
-"Investment Platforms"
-],
+// ---- Scroll reveal ----
+const revealElements = document.querySelectorAll('.reveal');
 
-experience: [
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, idx) => {
+    if (entry.isIntersecting) {
+      // Stagger children within the same parent
+      const siblings = entry.target.parentElement.querySelectorAll('.reveal:not(.visible)');
+      let delay = 0;
+      siblings.forEach(sib => {
+        if (sib === entry.target) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, delay);
+        }
+      });
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12,
+  rootMargin: '0px 0px -40px 0px'
+});
 
-{
-role:"Investment Reporting Analyst",
-company:"Empower – Bengaluru",
-period:"May 2025 – Present",
-desc:"Preparing and reviewing mutual fund financial statements under US GAAP, automating fund fact reviews using Custom GPT tools and validating reporting data using SQL."
-},
+revealElements.forEach(el => revealObserver.observe(el));
 
-{
-role:"Associate 2",
-company:"State Street – Chennai",
-period:"Oct 2022 – Apr 2025",
-desc:"Prepared fund level financial statements for Private Equity, CLOs, REITs, Hedge Funds and Fund of Funds under US GAAP and IFRS."
-},
+// ---- Active nav link on scroll ----
+const sections = document.querySelectorAll('section[id], header[id]');
+const navLinks = document.querySelectorAll('.nav-link');
 
-{
-role:"Intern",
-company:"Rajesh and Ganesh Chartered Accountant – Chennai",
-period:"Aug 2021 – Feb 2022",
-desc:"Worked on forensic audit, cost audit, product costing and MIS reporting."
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + entry.target.id) {
+          link.style.color = 'var(--accent)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => sectionObserver.observe(s));
+
+// ---- Smooth stagger on skill groups ----
+const skillGroups = document.querySelectorAll('.skill-group');
+skillGroups.forEach((group, i) => {
+  group.style.transitionDelay = `${i * 0.07}s`;
+});
+
+// ---- Timeline items stagger ----
+const timelineItems = document.querySelectorAll('.timeline-item');
+timelineItems.forEach((item, i) => {
+  const card = item.querySelector('.timeline-card');
+  if (card) card.style.transitionDelay = `${i * 0.1}s`;
+});
+
+// ---- Parallax orbs on mouse move (subtle) ----
+document.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 20;
+  const y = (e.clientY / window.innerHeight - 0.5) * 20;
+  const orb1 = document.querySelector('.orb-1');
+  const orb2 = document.querySelector('.orb-2');
+  if (orb1) orb1.style.transform = `translate(${x * 0.4}px, ${y * 0.4}px)`;
+  if (orb2) orb2.style.transform = `translate(${-x * 0.3}px, ${-y * 0.3}px)`;
+});
+
+// ---- Animate stat numbers ----
+function animateNumber(el, target, duration = 1200) {
+  const isNum = !isNaN(parseInt(target));
+  if (!isNum) return;
+  const num = parseInt(target);
+  const suffix = target.replace(num.toString(), '');
+  let start = null;
+  const step = (ts) => {
+    if (!start) start = ts;
+    const progress = Math.min((ts - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * num) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = target;
+  };
+  requestAnimationFrame(step);
 }
 
-],
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const numEl = entry.target.querySelector('.stat-num');
+      if (numEl) {
+        const original = numEl.textContent;
+        animateNumber(numEl, original);
+      }
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
 
-education: [
-"CMA Intermediate – Institute of Cost Accountants of India",
-"B.Com – DG Vaishnav College"
-]
-
-};
-
-
-// Populate profile
-
-document.getElementById("name").innerText = profile.name;
-document.getElementById("title").innerText = profile.title;
-document.getElementById("summary").innerText = profile.summary;
-document.getElementById("contact").innerText = profile.contact;
-
-
-// Skills
-
-const skillsList = document.getElementById("skillsList");
-
-profile.skills.forEach(skill=>{
-let li=document.createElement("li");
-li.innerText=skill;
-skillsList.appendChild(li);
-});
-
-
-// Experience
-
-const experienceList=document.getElementById("experienceList");
-
-profile.experience.forEach(job=>{
-let div=document.createElement("div");
-
-let title=document.createElement("h3");
-title.innerText=job.role;
-
-let company=document.createElement("p");
-company.innerText=job.company + " | " + job.period;
-
-let desc=document.createElement("p");
-desc.innerText=job.desc;
-
-div.appendChild(title);
-div.appendChild(company);
-div.appendChild(desc);
-
-experienceList.appendChild(div);
-});
-
-
-// Education
-
-const educationList=document.getElementById("educationList");
-
-profile.education.forEach(ed=>{
-let li=document.createElement("li");
-li.innerText=ed;
-educationList.appendChild(li);
-});
-
-
-// Microblog example
-
-const posts=[
-{
-title:"What is Fund Accounting?",
-text:"Fund accounting tracks assets and liabilities of investment funds separately for each investor group."
-},
-{
-title:"US GAAP vs IFRS",
-text:"US GAAP is rule based accounting while IFRS focuses on principles."
-}
-];
-
-const blog=document.getElementById("blogPosts");
-
-posts.forEach(post=>{
-let div=document.createElement("div");
-
-let title=document.createElement("h3");
-title.innerText=post.title;
-
-let text=document.createElement("p");
-text.innerText=post.text;
-
-div.appendChild(title);
-div.appendChild(text);
-
-blog.appendChild(div);
-});
+document.querySelectorAll('.stat-card').forEach(card => statObserver.observe(card));
