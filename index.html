@@ -6,264 +6,157 @@
 <title>Gajapathy Dasarathan | Investment Reporting Professional</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Background grid -->
-<div class="bg-grid"></div>
-<div class="bg-orb orb-1"></div>
-<div class="bg-orb orb-2"></div>
+<!-- Bird-flight canvas (full page background, invisible bird) -->
+<canvas id="birdCanvas"></canvas>
 
-<!-- Navigation -->
+<!-- NAV -->
 <nav class="navbar" id="navbar">
   <div class="nav-logo">GD</div>
   <div class="nav-links">
-    <a href="#profile" class="nav-link">Profile</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#experience" class="nav-link">Experience</a>
-    <a href="#education" class="nav-link">Education</a>
-    <a href="#contact" class="nav-link nav-cta">Contact</a>
+    <a href="#hero"           class="nav-link">Home</a>
+    <a href="#profile"        class="nav-link">Profile</a>
+    <a href="#skills"         class="nav-link">Skills</a>
+    <a href="#experience"     class="nav-link">Experience</a>
+    <a href="#certifications" class="nav-link">Certifications</a>
+    <a href="#education"      class="nav-link">Education</a>
+    <a href="#contact"        class="nav-link nav-cta">Contact</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#profile" class="mob-link">Profile</a>
-  <a href="#skills" class="mob-link">Skills</a>
-  <a href="#experience" class="mob-link">Experience</a>
-  <a href="#education" class="mob-link">Education</a>
-  <a href="#contact" class="mob-link">Contact</a>
+  <a href="#hero"           class="mob-link">Home</a>
+  <a href="#profile"        class="mob-link">Profile</a>
+  <a href="#skills"         class="mob-link">Skills</a>
+  <a href="#experience"     class="mob-link">Experience</a>
+  <a href="#certifications" class="mob-link">Certifications</a>
+  <a href="#education"      class="mob-link">Education</a>
+  <a href="#contact"        class="mob-link">Contact</a>
 </div>
 
-<!-- Hero -->
-<header class="hero" id="hero">
-
-  <!-- Stripe-style flowing wave canvas — right side -->
-  <div class="wave-wrapper">
-    <canvas id="waveCanvas"></canvas>
-  </div>
-
-  <div class="hero-inner">
-    <!-- Stripe-style ticker: "X% of professionals trust finance automation" -->
-    <div class="hero-ticker reveal">
-      <span class="ticker-label">Finance professionals using AI tools:</span>
-      <span class="ticker-value" id="tickerValue">0%</span>
+<!-- SCENE 1: HERO — Forest Dawn -->
+<section id="hero" class="scene" data-scene="0">
+  <div class="liquid-bg" id="liqBg0"></div>
+  <div class="scene-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal"><span class="dot-live"></span>Available for opportunities</div>
+    <h1 class="hero-name reveal">Gajapathy<br><em>Dasarathan</em></h1>
+    <p class="hero-role reveal">Investment Reporting &amp; Financial Reporting Professional</p>
+    <p class="hero-meta reveal">Chennai, India &nbsp;·&nbsp; 4+ Years &nbsp;·&nbsp; US GAAP · IFRS · AI Automation</p>
+    <div class="hero-btns reveal">
+      <a href="#experience" class="btn-primary">Explore Journey</a>
+      <a href="#contact"    class="btn-ghost">Get in Touch</a>
     </div>
-
-    <div class="hero-badge reveal">
-      <span class="badge-dot"></span>
-      Available for opportunities
-    </div>
-    <h1 class="hero-name reveal">
-      <span class="name-line">Gajapathy</span>
-      <span class="name-line accent-line">Dasarathan</span>
-    </h1>
-    <p class="hero-title reveal">Investment Reporting &amp; Financial Reporting Professional</p>
-    <p class="hero-sub reveal">Chennai, India &nbsp;·&nbsp; 4+ Years Experience &nbsp;·&nbsp; US GAAP · IFRS · AI Automation</p>
-    <div class="hero-actions reveal">
-      <a href="#experience" class="btn btn-primary">View Experience</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
-    </div>
-
-    <!-- Stripe-style trusted-by logos row -->
     <div class="trusted-row reveal">
-      <span class="trusted-label">Experienced with</span>
+      <span class="trusted-label">Experienced with platforms</span>
       <div class="trusted-logos">
-        <span class="trusted-logo">eVestment</span>
-        <span class="trusted-logo">Wilshire</span>
-        <span class="trusted-logo">Broadridge</span>
-        <span class="trusted-logo">Confluence</span>
-        <span class="trusted-logo">Callan</span>
+        <span>eVestment</span><span>Wilshire</span><span>Broadridge</span>
+        <span>Confluence</span><span>Callan</span><span>Informa</span>
       </div>
     </div>
   </div>
+  <div class="scroll-hint"><div class="scroll-line-anim"></div><span>Scroll to explore</span></div>
+</section>
 
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</header>
-
-<!-- Profile -->
-<section id="profile" class="section">
+<!-- SCENE 2: PROFILE — Waterfall -->
+<section id="profile" class="scene" data-scene="1">
+  <div class="liquid-bg" id="liqBg1"></div>
+  <div class="scene-overlay"></div>
   <div class="container">
-    <div class="section-label reveal">01 — Profile</div>
+    <div class="section-eyebrow reveal">01 — Profile</div>
     <h2 class="section-title reveal">About Me</h2>
     <div class="profile-grid">
       <div class="profile-text reveal">
-        <p>Investment Reporting and Financial Reporting professional with experience in <strong>Private Equity, Hedge Funds,</strong> and <strong>Separate Accounts</strong>. Strong focus on AI and automation including building Custom GPT tools to automate fund fact reviews and improve reporting efficiency.</p>
-        <p>Experienced in US GAAP and IFRS financial statements, KPI reporting and collaboration with onshore teams. Recognised by leadership at both Empower and State Street for quality improvements and innovative AI-based automation.</p>
+        <p>Investment Reporting and Financial Reporting professional with experience in <strong>Private Equity, Hedge Funds,</strong> and <strong>Separate Accounts.</strong> Strong focus on AI and automation, including building <strong>Custom GPT tools</strong> to automate fund fact reviews and improve accuracy and turnaround time.</p>
+        <p>Experienced in <strong>US GAAP and IFRS</strong> financial statements, KPI reporting, and close coordination with onshore teams. Technically skilled in Excel, MS Access, SQL, Power BI, and investment platforms such as eVestment, Wilshire, Callan, and Broadridge.</p>
+        <p>Recognised by <strong>senior leadership and the Director</strong> at Empower for Custom GPT development and AI integration, and by the <strong>Managing Director</strong> at State Street for quality and process improvements in financial reporting.</p>
       </div>
       <div class="profile-stats reveal">
-        <div class="stat-card">
-          <span class="stat-num">4+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Major Employers</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">2</span>
-          <span class="stat-label">Accounting Standards</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">AI</span>
-          <span class="stat-label">Automation Builder</span>
-        </div>
+        <div class="stat-card"><span class="stat-num" data-target="4">0</span><span class="stat-suf">+</span><span class="stat-label">Years Experience</span></div>
+        <div class="stat-card"><span class="stat-num" data-target="3">0</span><span class="stat-suf"></span><span class="stat-label">Major Employers</span></div>
+        <div class="stat-card"><span class="stat-num" data-target="2">0</span><span class="stat-suf"></span><span class="stat-label">Accounting Standards</span></div>
+        <div class="stat-card"><span class="stat-num" style="font-size:1.6rem">AI</span><span class="stat-suf"></span><span class="stat-label">Automation Builder</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="section section-alt">
+<!-- SCENE 3: SKILLS — Ocean / Coral Reef -->
+<section id="skills" class="scene" data-scene="2">
+  <div class="liquid-bg" id="liqBg2"></div>
+  <div class="scene-overlay"></div>
   <div class="container">
-    <div class="section-label reveal">02 — Skills</div>
+    <div class="section-eyebrow reveal">02 — Skills</div>
     <h2 class="section-title reveal">Core Competencies</h2>
     <div class="skills-grid">
-
-      <div class="skill-group reveal">
-        <div class="skill-group-icon">📊</div>
-        <h3>Financial & Investment Reporting</h3>
-        <div class="tag-list">
-          <span class="tag">Financial Reporting</span>
-          <span class="tag">Private Equity</span>
-          <span class="tag">Hedge Funds</span>
-          <span class="tag">Mutual Funds</span>
-          <span class="tag">CLO</span>
-          <span class="tag">REITs</span>
-        </div>
-      </div>
-
-      <div class="skill-group reveal">
-        <div class="skill-group-icon">📋</div>
-        <h3>Accounting Standards</h3>
-        <div class="tag-list">
-          <span class="tag tag-accent">US GAAP</span>
-          <span class="tag tag-accent">IFRS</span>
-          <span class="tag">KPI Preparation</span>
-          <span class="tag">Financial Statements</span>
-        </div>
-      </div>
-
-      <div class="skill-group reveal">
-        <div class="skill-group-icon">🤖</div>
-        <h3>AI & Automation</h3>
-        <div class="tag-list">
-          <span class="tag tag-gold">Custom GPT Development</span>
-          <span class="tag tag-gold">Process Automation</span>
-          <span class="tag tag-gold">AI in Finance</span>
-          <span class="tag tag-gold">ChatGPT</span>
-        </div>
-      </div>
-
-      <div class="skill-group reveal">
-        <div class="skill-group-icon">🛠️</div>
-        <h3>Data & Reporting Tools</h3>
-        <div class="tag-list">
-          <span class="tag">MS Excel</span>
-          <span class="tag">SQL</span>
-          <span class="tag">MS Access</span>
-          <span class="tag">Power BI</span>
-          <span class="tag">SAP</span>
-          <span class="tag">Tally ERP</span>
-        </div>
-      </div>
-
-      <div class="skill-group reveal">
-        <div class="skill-group-icon">📈</div>
-        <h3>Investment Platforms</h3>
-        <div class="tag-list">
-          <span class="tag">Nasdaq eVestment</span>
-          <span class="tag">Wilshire</span>
-          <span class="tag">Callan</span>
-          <span class="tag">Informa</span>
-          <span class="tag">Broadridge</span>
-          <span class="tag">Confluence</span>
-        </div>
-      </div>
-
+      <div class="skill-card reveal"><div class="skill-icon">📊</div><h3>Financial &amp; Investment Reporting</h3><div class="tags"><span>Financial Reporting</span><span>Private Equity</span><span>Hedge Funds</span><span>Mutual Funds</span><span>CLO</span><span>REITs</span><span>Fund of Funds</span></div></div>
+      <div class="skill-card reveal"><div class="skill-icon">📋</div><h3>Accounting Standards</h3><div class="tags tags-blue"><span>US GAAP</span><span>IFRS</span><span>KPI Preparation</span><span>Balance Sheets</span><span>Income Statements</span><span>Cash Flow</span></div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🤖</div><h3>AI &amp; Automation</h3><div class="tags tags-green"><span>Custom GPT Development</span><span>Process Automation</span><span>AI Integration in Finance</span><span>ChatGPT</span><span>Workflow Optimization</span></div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🛠️</div><h3>Data &amp; Reporting Tools</h3><div class="tags"><span>MS Excel</span><span>SQL</span><span>MS Access</span><span>Power BI</span><span>SAP</span><span>Tally ERP</span><span>TCS ION</span></div></div>
+      <div class="skill-card reveal"><div class="skill-icon">📈</div><h3>Investment Platforms</h3><div class="tags tags-teal"><span>Nasdaq eVestment</span><span>Wilshire</span><span>Callan</span><span>Informa</span><span>Broadridge</span><span>Confluence (IMGD)</span></div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🤝</div><h3>Professional Skills</h3><div class="tags"><span>Onshore–Offshore Coordination</span><span>Stakeholder Communication</span><span>SOP Documentation</span><span>Process Improvement</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- Experience -->
-<section id="experience" class="section">
+<!-- SCENE 4: EXPERIENCE — Mountain -->
+<section id="experience" class="scene" data-scene="3">
+  <div class="liquid-bg" id="liqBg3"></div>
+  <div class="scene-overlay"></div>
   <div class="container">
-    <div class="section-label reveal">03 — Experience</div>
+    <div class="section-eyebrow reveal">03 — Experience</div>
     <h2 class="section-title reveal">Professional Journey</h2>
     <div class="timeline">
 
-      <div class="timeline-item reveal">
-        <div class="timeline-marker">
-          <div class="tl-dot active"></div>
-          <div class="tl-line"></div>
-        </div>
-        <div class="timeline-card">
-          <div class="tl-header">
-            <div>
-              <span class="tl-period current">May 2025 – Present</span>
-              <h3 class="tl-role">Investment Reporting Analyst</h3>
-              <p class="tl-company">Empower &nbsp;·&nbsp; Bengaluru</p>
-            </div>
-            <div class="tl-badge">Current</div>
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div><span class="tl-date current-date">May 2025 – Present</span><h3>Investment Reporting Analyst</h3><p class="tl-org">Empower · Bengaluru, Karnataka</p></div>
+            <span class="tl-badge">Current</span>
           </div>
-          <ul class="tl-bullets">
-            <li>Prepared and reviewed financial statements and disclosures for Mutual Funds in compliance with US GAAP</li>
-            <li>Reviewed fund fact sheets to verify completeness and regulatory requirements</li>
-            <li>Built Custom GPT tools to automate fund fact review processes — <em>recognised by leadership</em></li>
-            <li>Executed SQL queries using MS Access for data validation and reporting</li>
-            <li>Worked with Nasdaq eVestment, Wilshire, Callan, Informa, Broadridge and Confluence platforms</li>
+          <ul class="tl-list">
+            <li>Prepared and reviewed financial statements, notes, and disclosures for Mutual Funds ensuring full compliance with US GAAP; reviewed fund fact sheets for completeness and regulatory requirements.</li>
+            <li>Coordinated regularly with onshore team to align on fund delivery timelines and resolve queries.</li>
+            <li>Built a <strong>Custom GPT in ChatGPT</strong> to automate fund fact review processes; integrated AI into existing workflows to improve accuracy and efficiency. Executed SQL queries using MS Access for data validation and reporting.</li>
+            <li>Worked on Nasdaq eVestment for fund fact data accuracy; managed and maintained data via Wilshire, Callan, Informa, Broadridge, and Confluence (IMGD).</li>
+            <li><em>Achievement:</em> Received appreciation from senior leadership and Director for developing Custom GPT and driving AI integration in the process.</li>
           </ul>
         </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-marker">
-          <div class="tl-dot"></div>
-          <div class="tl-line"></div>
-        </div>
-        <div class="timeline-card">
-          <div class="tl-header">
-            <div>
-              <span class="tl-period">Oct 2022 – Apr 2025</span>
-              <h3 class="tl-role">Associate 2</h3>
-              <p class="tl-company">State Street &nbsp;·&nbsp; Chennai</p>
-            </div>
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div><span class="tl-date">October 2022 – April 2025</span><h3>Associate 2</h3><p class="tl-org">State Street · Chennai, Tamil Nadu</p></div>
           </div>
-          <ul class="tl-bullets">
-            <li>Prepared financial statements for Private Equity, CLO, Hedge Funds, REITs and Fund of Funds</li>
-            <li>Prepared balance sheets, income statements, capital statements, schedules of investments and footnotes</li>
-            <li>Worked under US GAAP and IFRS reporting standards</li>
-            <li>Collaborated with onshore teams for fund delivery timelines</li>
-            <li>Received appreciation from Managing Director for quality improvements</li>
+          <ul class="tl-list">
+            <li>Prepared and reviewed fund-level financial statements under <strong>US GAAP and IFRS</strong> for Private Equity, CLO, Fund of Funds, REITs, and Hedge Funds.</li>
+            <li>Produced consolidated balance sheets, income statements, partners' capital statements, schedules of investments, footnotes, and cash flow statements across Master Feeder, Standalone, and Co-Investment structures.</li>
+            <li>Interacted regularly with onshore team on fund delivery timelines; prepared and reviewed Standard Operating Procedures for Financial Reporting.</li>
+            <li>Collaborated with cross-functional teams to resolve accounting and reporting issues; implemented process improvements to increase efficiency and reduce errors.</li>
+            <li><em>Achievement:</em> Received appreciation from Managing Director for quality and process improvements in the financial reporting process.</li>
           </ul>
         </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-marker">
-          <div class="tl-dot"></div>
-        </div>
-        <div class="timeline-card">
-          <div class="tl-header">
-            <div>
-              <span class="tl-period">Aug 2021 – Feb 2022</span>
-              <h3 class="tl-role">Intern</h3>
-              <p class="tl-company">Rajesh &amp; Ganesh Chartered Accountant &nbsp;·&nbsp; Chennai</p>
-            </div>
+      <div class="tl-item reveal">
+        <div class="tl-marker"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div><span class="tl-date">August 2021 – February 2022</span><h3>Intern</h3><p class="tl-org">Rajesh &amp; Ganesh Chartered Accountant · Chennai, Tamil Nadu</p></div>
           </div>
-          <ul class="tl-bullets">
-            <li>Worked on accounting and audit services for clients</li>
-            <li>Participated in forensic audit and cost audit assignments</li>
-            <li>Performed product costing and variance analysis for MSMEs</li>
-            <li>Prepared MIS reports for management</li>
+          <ul class="tl-list">
+            <li>Provided accounting and audit services for clients at a chartered accountancy firm.</li>
+            <li>Worked on forensic audit, cost audit, product costing, vouching, and MIS reporting.</li>
+            <li>Computed product cost for various MSMEs and provided variance analysis to management.</li>
           </ul>
         </div>
       </div>
@@ -272,67 +165,125 @@
   </div>
 </section>
 
-<!-- Education -->
-<section id="education" class="section section-alt">
+<!-- SCENE 5: CERTIFICATIONS — Beach -->
+<section id="certifications" class="scene" data-scene="4">
+  <div class="liquid-bg" id="liqBg4"></div>
+  <div class="scene-overlay"></div>
   <div class="container">
-    <div class="section-label reveal">04 — Education</div>
+    <div class="section-eyebrow reveal">04 — Certifications</div>
+    <h2 class="section-title reveal">LinkedIn Learning &amp; Credentials</h2>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-logo ai-logo">AI</div>
+        <div class="cert-body">
+          <h3>AI Fluency for Students</h3>
+          <p class="cert-issuer">Anthropic</p>
+          <p class="cert-meta">Issued Mar 2026 · Credential ID: f95vi7jgs7p4</p>
+          <div class="cert-tags"><span>Artificial Intelligence (AI)</span><span>AI for Career Development</span></div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-logo li-logo">in</div>
+        <div class="cert-body">
+          <h3>Derivatives Fundamentals</h3>
+          <p class="cert-issuer">LinkedIn Learning</p>
+          <p class="cert-meta">Issued Jun 2025</p>
+          <div class="cert-tags"><span>Accounting</span><span>Finance</span></div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-logo li-logo">in</div>
+        <div class="cert-body">
+          <h3>Excel and ChatGPT: Data Analysis Power Tips</h3>
+          <p class="cert-issuer">LinkedIn Learning</p>
+          <p class="cert-meta">Issued Aug 2025</p>
+          <div class="cert-tags"><span>AI for Business</span><span>AI for Business Analysis</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 6: EDUCATION — Cityscape -->
+<section id="education" class="scene" data-scene="5">
+  <div class="liquid-bg" id="liqBg5"></div>
+  <div class="scene-overlay"></div>
+  <div class="container">
+    <div class="section-eyebrow reveal">05 — Education</div>
     <h2 class="section-title reveal">Academic Background</h2>
     <div class="edu-grid">
       <div class="edu-card reveal">
         <div class="edu-icon">🎓</div>
-        <div class="edu-body">
+        <div>
           <h3>CMA Intermediate</h3>
-          <p class="edu-inst">Institute of Cost Accountants of India</p>
-          <span class="edu-year">2020</span>
+          <p class="edu-inst">The Institute of Cost Accountants of India</p>
+          <div class="edu-meta"><span class="edu-year">2020</span><span class="edu-score">Score: 64%</span></div>
         </div>
       </div>
       <div class="edu-card reveal">
         <div class="edu-icon">🏛️</div>
-        <div class="edu-body">
+        <div>
           <h3>B.Com</h3>
           <p class="edu-inst">DG Vaishnav College</p>
-          <span class="edu-year">2021</span>
+          <div class="edu-meta"><span class="edu-year">2021</span><span class="edu-score">Score: 86%</span></div>
         </div>
       </div>
     </div>
-
-    <!-- Additional Info -->
-    <div class="section-label reveal" style="margin-top:3rem">Languages &amp; Other</div>
-    <div class="lang-grid reveal">
-      <div class="lang-item"><span class="lang-name">English</span><span class="lang-level fluent">Fluent</span></div>
-      <div class="lang-item"><span class="lang-name">Tamil</span><span class="lang-level native">Native</span></div>
-      <div class="lang-item"><span class="lang-name">Telugu</span><span class="lang-level beginner">Beginner</span></div>
-      <div class="lang-item"><span class="lang-name">Typewriting</span><span class="lang-level intermediate">Intermediate</span></div>
+    <div class="section-eyebrow reveal" style="margin-top:3.5rem">Languages &amp; Additional</div>
+    <div class="lang-row reveal">
+      <div class="lang-pill"><span class="lname">English</span><span class="ltag fluent">Fluent · Advanced</span></div>
+      <div class="lang-pill"><span class="lname">Tamil</span><span class="ltag native">Native</span></div>
+      <div class="lang-pill"><span class="lname">Telugu</span><span class="ltag beginner">Beginner</span></div>
+      <div class="lang-pill"><span class="lname">Typewriting</span><span class="ltag intermediate">Intermediate</span></div>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="section contact-section">
+<!-- SCENE 7: CONTACT — Sunrise -->
+<section id="contact" class="scene" data-scene="6">
+  <div class="liquid-bg" id="liqBg6"></div>
+  <div class="scene-overlay"></div>
   <div class="container">
-    <div class="section-label reveal">05 — Contact</div>
+    <div class="section-eyebrow reveal">06 — Contact</div>
     <h2 class="section-title reveal">Let's Connect</h2>
-    <p class="contact-sub reveal">Open to Investment Reporting, Financial Reporting, and AI Automation roles.</p>
-    <div class="contact-cards reveal">
-      <a href="mailto:gajapathy165@gmail.com" class="contact-card">
-        <span class="contact-icon">✉️</span>
-        <div>
-          <span class="contact-label">Email</span>
-          <span class="contact-value">gajapathy165@gmail.com</span>
+    <p class="contact-sub reveal">Open to Investment Reporting, Financial Reporting &amp; AI Automation roles.</p>
+    <div class="contact-layout">
+      <div class="contact-cards reveal">
+        <a href="mailto:gajapathy165@gmail.com" class="c-card">
+          <span class="c-icon">✉️</span>
+          <div><span class="c-label">Email</span><span class="c-val">gajapathy165@gmail.com</span></div>
+        </a>
+        <div class="c-card">
+          <span class="c-icon">📍</span>
+          <div><span class="c-label">Location</span><span class="c-val">Chennai, Tamil Nadu, India</span></div>
         </div>
-      </a>
-      <a href="tel:+919345465667" class="contact-card">
-        <span class="contact-icon">📞</span>
-        <div>
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">+91 93454 65667</span>
+        <a href="https://linkedin.com/in/trulygaja" target="_blank" rel="noopener" class="c-card">
+          <span class="c-icon">🔗</span>
+          <div><span class="c-label">LinkedIn</span><span class="c-val">linkedin.com/in/trulygaja</span></div>
+        </a>
+      </div>
+
+      <!-- AI Chatbot -->
+      <div class="chatbot reveal">
+        <div class="cb-header">
+          <div class="cb-avatar">GD</div>
+          <div><p class="cb-name">Portfolio Assistant</p><p class="cb-sub">Ask anything about Gajapathy</p></div>
+          <div class="cb-online"><span></span>Online</div>
         </div>
-      </a>
-      <div class="contact-card">
-        <span class="contact-icon">📍</span>
-        <div>
-          <span class="contact-label">Location</span>
-          <span class="contact-value">Chennai, Tamil Nadu, India</span>
+        <div class="cb-messages" id="chatMessages">
+          <div class="msg bot"><p>Hi! I'm Gajapathy's portfolio assistant. Ask me about his experience, skills, certifications, or education. 👋</p></div>
+        </div>
+        <div class="cb-suggestions" id="chatSugg">
+          <button onclick="askSugg(this)">Key skills?</button>
+          <button onclick="askSugg(this)">AI work?</button>
+          <button onclick="askSugg(this)">Certifications?</button>
+          <button onclick="askSugg(this)">Current role?</button>
+        </div>
+        <div class="cb-input">
+          <input type="text" id="chatInput" placeholder="Ask anything…" autocomplete="off">
+          <button id="chatSend" onclick="sendChat()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -340,9 +291,7 @@
 </section>
 
 <footer class="footer">
-  <div class="container">
-    <p>© 2026 Gajapathy Dasarathan &nbsp;·&nbsp; Investment Reporting Professional</p>
-  </div>
+  <p>© 2026 Gajapathy Dasarathan &nbsp;·&nbsp; Investment Reporting Professional &nbsp;·&nbsp; Chennai, India</p>
 </footer>
 
 <script src="script.js"></script>
